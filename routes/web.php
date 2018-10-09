@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::post('/home', 'LoginController@login');
+Route::get('/login', 'LoginController@signout');

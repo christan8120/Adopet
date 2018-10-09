@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/content-style.css')}}">
     <script src="main.js"></script>
 </head>
 <body>
     <div class="content">
         <header class="header-content">
-            <div class="header-content-title"></div>
-            <div class="header-content-menu"></div>
+            <div class="header-content-title">Ini title</div>
+            <div class="header-content-menu">Ini menu > <a href="\login">Sign out</a></div>
         </header>
         <main class="main-content">@yield('content')</main>
-        <footer class="footer-content"></footer>
+        <footer class="footer-content">blam blam blam</footer>
     </div>
 </body>
 </html>
