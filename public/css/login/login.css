@@ -1,0 +1,44 @@
+body{
+    overflow: hidden;
+    margin: 0px;
+}
+
+.login-container{    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.login-form{
+    z-index: 2;
+    position: absolute;
+}
+
+.login-container img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+
+.text-input{
+    width: 300px;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.text-submit{
+    width: 300px;
+    border-radius: 10px;
+    height: 24px;
+    font-size: 12px;
+    background-color: brown;
+    cursor: pointer;
+    color: white;
+}
