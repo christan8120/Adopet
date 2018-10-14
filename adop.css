@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+
+body{
+
+    margin: 0px;
+    /*background-image:url('background/1.jpg');*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100%;*/
+    font-family: 'Niramit', sans-serif;
+    background-color: #ffe3fc
+}
+
+.header{
+    width: 100%;
+    height: 50%;
+}
+
+.header-logo{
+    text-align: center;
+}
+
+.header-logo img{
+    width:90vw;
+    max-width: 500px;
+}
+
+.content{
+    max-width: 1000px;
+    padding: 0;
+    text-align: center;
+    margin: 0 12%;
+}
+
+.content-title
+{ 
+    font-size: 9vw;
+    text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  .content-title {
+     font-size: 67.5px;
+  }
+}
+
+.content-form input, .content-form textarea
+{
+    width:100%;
+    border: 2px solid #0cb364;
+    border-radius: 5%;
+    background-color: white;
+    margin-bottom: 5px;  
+    height: 25px;
+    font-size: 15px; 
+}
+
+@media screen and (min-width: 750px) {
+  .content-form input, .content-form textarea {
+     height:30px;
+  }
+}
+
+.content-form input[type="submit"]
+{  
+    margin-top: 20px;
+    border-radius: 5%;
+    background-color: #cbda42;
+
+}
+
+.content-form input[type="submit"]:hover
+{
+    background-color: white;
+    border:5px solid black;
+}
+
+.content-form #gender input, .content-form #agreement input{
+    width:unset;
+}
+
+.content-form #agreement{
+    text-align: left;
+}
+
+.content-form #gender{
+    text-align: left;
+}
+
+.footer{    
+    text-align: center;
+    background-color: #c200c0;
+    color:#fff;
+    margin-top: 20px;
+}
+
+.footer-title
+{
+    text-align: center;
+}
+
