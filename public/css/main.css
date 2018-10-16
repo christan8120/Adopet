@@ -159,6 +159,7 @@ iframe {
 }
 
 .container-login100 {
+    background-image: url('../image/bg-01.jpg');
   width: 100%;  
   min-height: 100vh;
   display: -webkit-box;
@@ -468,4 +469,19 @@ iframe {
     padding-left: 15px;
     padding-right: 15px;
   }
-} 
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ Footer ]*/
+
+.footer{
+    text-align: center;
+    background-color: #c200c0;
+    color:#fff;
+    padding-top: 7px;
+}
+
+.footer-title
+{
+    text-align: center;
+}

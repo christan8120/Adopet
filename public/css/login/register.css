@@ -2,7 +2,6 @@ body{
     margin: 0px;
     background-position: center;
     background-size: cover;
-    font-family: 'Niramit', sans-serif;
 }
 
 .header{
@@ -15,7 +14,7 @@ body{
 }
 
 .header-logo img{
-    width:90vw;
+    width:100%;
     max-width: 500px;
 }
 
@@ -40,6 +39,8 @@ body{
 {
     font-size: 9vw;
     text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
 }
 
 @media screen and (min-width: 750px) {
@@ -58,12 +59,18 @@ body{
 .content-form input, .content-form textarea
 {
     width: 100%;
-    border: 2px solid #0cb364;
+    border-bottom: 2px solid #0cb364;
     border-radius: 5%;
     background-color: white;
     margin-bottom: 10px;
     height: 35px;
-    font-size: 18px;
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.content-form input:focus, .content-form textarea:focus{
+    border-bottom: 2px solid #00dbde !important;
 }
 
 @media screen and (min-width: 750px) {
@@ -72,40 +79,16 @@ body{
     }
 }
 
-.content-form input[type="submit"]
-{
-    margin-top: 20px;
-    border-radius: 5%;
-    background-color: #f7fa13;
-
-}
-
-.content-form input[type="submit"]:hover
-{
-    background-color: white;
-    border:5px solid black;
-}
-
 .content-form #gender input, .content-form #agreement input{
     width:unset;
 }
 
 .content-form #agreement{
     text-align: left;
+    padding-bottom: 12px;
 }
 
 .content-form #gender{
     text-align: left;
-}
-
-.footer{
-    text-align: center;
-    background-color: #c200c0;
-    color:#fff;
-}
-
-.footer-title
-{
-    text-align: center;
 }
 

@@ -1,23 +1,7 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: kevin
- * Date: 15/10/2018
- * Time: 22.29
- */
-?>
-<!DOCTYPE html>
-<html lang="en">
-<style>
-	body, html {
-		height: 100%;
-	}
-</style>
-<head>
-	<title>Adopet</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
+@extends('layout')
+@section('title','Adopet')
+
+@section('head')
 	<link rel="icon" type="image/png" href="{{asset('image/logo/logo.png')}}"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap/css/bootstrap.min.css')}}">
@@ -36,14 +20,14 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{asset('vendor/daterangepicker/daterangepicker.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{asset('css/login/util.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/login/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/login/util.css')}}">
 <!--===============================================================================================-->
-</head>
-<body>
+@endsection
+
+@section('content')
 
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url({{asset('image/bg-01.jpg')}});">
+		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-49">
@@ -109,9 +93,6 @@ Login
 		</div>
 	</div>
 
-
-	<div id="dropDownSelect1"></div>
-
 <!--===============================================================================================-->
 	<script src="{{asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 <!--===============================================================================================-->
@@ -129,5 +110,4 @@ Login
 <!--===============================================================================================-->
 	<script src="{{asset("js/login/main.js")}}"></script>
 
-</body>
-</html>
+@endsection
