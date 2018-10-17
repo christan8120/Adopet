@@ -13,14 +13,22 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+//        php artisan migrate
+//        php artisan migrate:rollback
+//        php artisan migrate:fresh
+//        php artisan migrate:refresh
+
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('email')->unique();
+            $table->string('address');
+            $table->string('gender');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
+//            $table->rememberToken();
         });
     }
 

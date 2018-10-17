@@ -27,5 +27,9 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('post/create', 'Auth\RegisterController@create');
+Route::post('post', 'Auth\RegisterController@store');
+Route::resource('/User', 'Auth\RegisterController');
+
 // Route::post('/home', 'LoginController@login');
 // Route::get('/login', 'LoginController@signout');

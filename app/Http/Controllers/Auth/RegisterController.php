@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -68,5 +70,27 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'unique:Users'
+        ]);
+
+        $user = new User;
+        $user->name = $request->input('name');
+        $user->password = Hash::make($request->input('password'));
+        $user->email = $request->input('email');
+        $user->address = $request->input('address');
+        if($request->gender == 'male') $user->gender = "Male";
+        elseif ($request->gender == 'female') $user->gender = "Female";
+        $user->created_at = Carbon::now();
+        $user->save();
+
+        $input = $request->input('email');
+//        return view('login', compact('input'));
+//        return view('login', compact('input')) ->with('alert', 'Updated!');
+        return redirect()->back() ->with('alert', $input);
     }
 }

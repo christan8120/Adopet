@@ -5,7 +5,6 @@
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/login/register.css')}}">
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
 
 @section('content')
@@ -50,7 +49,30 @@
             }
             return true;
         }
+
+        var msg = '{{Session::get('alert')}}';
+        var exist = '{{Session::has('alert')}}';
+        if(exist){
+            // swal("Yay", msg + " is successfully created!", "success");
+            swal({
+                title: "Yay!",
+                text: msg + " is successfully created!",
+                icon: "success"
+            }).then(function() {
+                window.location = "/login";
+            });
+        }
     </script>
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
 
 	<div class="limiter">
@@ -67,17 +89,18 @@
 					</div>
 
 					<div class="content-form">
-						<form action="/login" method="post" onsubmit="return Submit()">
-							<input id="txtName" type="text" name="Full name" placeholder="Full name"><br>
+						<form action="{{action('Auth\RegisterController@store')}}" method="post" onsubmit="return Submit()">
+                            @csrf
+							<input id="txtName" type="text" name="name" placeholder="Full name"><br>
 							<input id="txtPassword" type="password" name="password" placeholder="password"><br>
-							<input id="txtPassword2" type="password" name="password" placeholder="password"><br>
+							<input id="txtPassword2" type="password" name="password2" placeholder="repeat password"><br>
 							<input id="txtEmail" type="email" name="email" placeholder="email">
 
-							<textarea id="txtAddress" placeholder="address"></textarea>
+							<textarea id="txtAddress" name="address" placeholder="address"></textarea>
 
                             <div id="gender">
-                                <input id="rbMale" type="radio" name="gender">Male
-                                <input id="rbFemale" type="radio" name="gender" style="margin-left:30%">Female
+                                <input id="rbMale" type="radio" name="gender" value="male">Male
+                                <input id="rbFemale" type="radio" name="gender" value="female" style="margin-left:30%">Female
                             </div>
 
 							<div id="agreement"><input id="cbxAgree" type="checkbox" name="agreement"> I agree with the terms and conditions</div>
