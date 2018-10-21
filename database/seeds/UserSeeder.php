@@ -16,7 +16,8 @@ class UserSeeder extends Seeder
         $faker = Faker\Factory::create();
         DB::table('users')->insert([
             'name' => 'admin',
-            'password' => Hash::make('admin'),
+            // 'password' => Hash::make('admin'),
+            'password' => 'admin',
             'email' => $faker->unique()->safeEmail,
             'address' => $faker->address,
             'gender' => 'Male',

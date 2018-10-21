@@ -59,7 +59,8 @@
                 text: msg + " is successfully created!",
                 icon: "success"
             }).then(function() {
-                window.location = "/login";
+                //window.location = "/login";
+                window.location = '/';
             });
         }
     </script>
@@ -89,8 +90,9 @@
 					</div>
 
 					<div class="content-form">
-						<form action="{{action('Auth\RegisterController@store')}}" method="post" onsubmit="return Submit()">
-                            @csrf
+						<!-- <form action="{{action('Auth\RegisterController@store')}}" method="post" onsubmit="return Submit()"> -->
+                        <form action="/post" method="post" onsubmit="return Submit()">
+                            {{ csrf_field()}}
 							<input id="txtName" type="text" name="name" placeholder="Full name"><br>
 							<input id="txtPassword" type="password" name="password" placeholder="password"><br>
 							<input id="txtPassword2" type="password" name="password2" placeholder="repeat password"><br>
@@ -99,11 +101,11 @@
 							<textarea id="txtAddress" name="address" placeholder="address"></textarea>
 
                             <div id="gender">
-                                <input id="rbMale" type="radio" name="gender" value="male">Male
-                                <input id="rbFemale" type="radio" name="gender" value="female" style="margin-left:30%">Female
+                                <input id="rbMale" type="radio" name="gender" value="male"><label>Male</label>
+                                <input id="rbFemale" type="radio" name="gender" value="female" style="margin-left:30%"><label>Female</label>
                             </div>
 
-							<div id="agreement"><input id="cbxAgree" type="checkbox" name="agreement"> I agree with the terms and conditions</div>
+							<div id="agreement"><input id="cbxAgree" type="checkbox" name="agreement"><label>I agree with the terms and conditions</label></div>
 
                             <div class="container-login100-form-btn">
                                 <div class="wrap-login100-form-btn">
