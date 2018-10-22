@@ -29,17 +29,16 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form" action="/login" method="post">
-					{{ csrf_field()}}
+				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-49">
 					<img src="{{asset('image/logo/logo.png')}}" height="100%" , width="100%"> <br><br>
 WELCOME TO ADOPET <br> <br>
 Login <br>
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Email is required">
-						<span class="label-input100">Email</span>
-						<input class="input100" type="Email" name="username" placeholder="Type your Email">
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="username" placeholder="Type your username">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 

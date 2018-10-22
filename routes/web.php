@@ -14,15 +14,22 @@
 Route::get('/', function () {
     return view('login');
 });
-Route::post('/login', 'LoginController@login');
-Route::get('/home', 'LoginController@showHome');
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::post('/login', function () {
+    return view('login');
+});
 
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('post/create', 'Auth\RegisterController@create');
+Route::post('post', 'Auth\RegisterController@store');
 Route::resource('/User', 'Auth\RegisterController');
-Route::post('post/create', 'Auth\RegisterController@create');
-Route::post('/post', 'Auth\RegisterController@store');
 
 // Route::post('/home', 'LoginController@login');
 // Route::get('/login', 'LoginController@signout');

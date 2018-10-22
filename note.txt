@@ -1,6 +1,0 @@
-jangan lupa buat database nya dulu,
-maap kalau code nya berantakan
-maklum masi belajar
-login udah, tp msi super duper berantakan banget pake amat sangat
-jgn lupa jalanin seeder biar ada akun buat login nya
-tolong di rapihin ya code nya..
