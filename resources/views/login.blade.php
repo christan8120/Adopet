@@ -29,13 +29,13 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post" action="/login/submit">
+				{{csrf_field()}}
 					<span class="login100-form-title p-b-49">
 					<img src="{{asset('image/logo/logo.png')}}" height="100%" , width="100%"> <br><br>
 WELCOME TO ADOPET <br> <br>
 Login <br>
-					</span>
-
+					</span>					
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Username</span>
 						<input class="input100" type="text" name="username" placeholder="Type your username">
@@ -61,8 +61,10 @@ Login <br>
 Login
 							</button>
 						</div>
-					</div>
-
+					</div>	
+					@if($message = Session::get('error'))		
+						<p>{{$message}}</p>
+					@endif		
 					<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
 							Or Sign Up Using
