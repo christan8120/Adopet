@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use App\Model\Pet;
 class LoginController extends Controller
 {
     //
@@ -16,7 +17,8 @@ class LoginController extends Controller
         if(count($data) != 0){
             $bool = Hash::check($pass, $data[0]->password);        
             if($bool){
-                return view("master/home");
+                $pets = Pet::all();                
+                return view("master/home", ['pets'=>$pets]);                
                 //return back()->with('error', $data);
             }
             else{

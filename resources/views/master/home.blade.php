@@ -54,18 +54,48 @@
         <div class="container-login100">
             <div class="wrap-login100">
 
-                <div class="col-lg-3 col-md-4 col-xs-6">
+                @if(count($pets) > 0)
+                    @foreach($pets as $pet)
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <img id="myImg{{$pet->pet_id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="">
+                    </div>
+
+                    <div id="myModal{{$pet->pet_id}}" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="col-md-8">
+                            <img class="img-fluid" id="alt_{{$pet->pet_id}}" src="{{asset($pet->picture_src)}}" alt="">
+                        </div>
+
+                        <div class="col-md-4">
+                            <h3 class="my-3">Pet Description</h3>
+                            <p>{{$pet->description}}</p>
+                            <!-- <h3 class="my-3">Project Details</h3> -->
+                            <!--  <ul>
+                            <li>Lorem Ipsum</li>
+                            <li>Dolor Sit Amet</li>
+                            <li>Consectetur</li>
+                            <li>Adipiscing Elit</li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    </div>
+                    @endforeach
+                @endif
+                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
 
                     <img id="myImg1" class="img-fluid img-thumbnail" src="{{asset('image/pet/cat/1.jpg')}}" alt="">
                 </div>
                 <div class="col-lg-3 col-md-4 col-xs-6">
                     <img id="myImg2" class="img-fluid img-thumbnail" src="{{asset('image/pet/cat/2.jpg')}}" alt="">
-                </div>
+                </div> -->
 
-                <div id="myModal1" class="modal">
+                <!-- <div id="myModal1" class="modal"> -->
 
                     <!-- Modal content -->
-                    <div class="modal-content">
+                    <!-- <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="col-md-8">
                             <img class="img-fluid" id="alt_1" src="{{asset('image/pet/cat/1.jpg')}}" alt="">
@@ -74,23 +104,23 @@
                         <div class="col-md-4">
                             <h3 class="my-3">Project Description</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                            <!-- <h3 class="my-3">Project Details</h3> -->
+                             <h3 class="my-3">Project Details</h3> -->
                             <!--  <ul>
                                <li>Lorem Ipsum</li>
                                <li>Dolor Sit Amet</li>
                                <li>Consectetur</li>
                                <li>Adipiscing Elit</li>
                              </ul> -->
-                        </div>
+                        <!-- </div>
                     </div>
 
-                </div>
+                </div>  -->
 
                 <!-- The Modal -->
-                <div id="myModal2" class="modal">
+                <!-- <div id="myModal2" class="modal"> -->
 
                     <!-- Modal content -->
-                    <div class="modal-content">
+                    <!-- <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="col-md-8">
                             <img class="img-fluid" id="alt_1" src={{asset('image/pet/cat/2.jpg')}} alt="">
@@ -109,12 +139,7 @@
                         </div>
                     </div>
 
-                </div>
-
-
-
-
-
+                </div> -->
             </div>
         </div>
     </div>

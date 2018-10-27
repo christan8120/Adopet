@@ -25,7 +25,19 @@
 @endsection
 
 @section('content')
-
+<script>
+var exist = '{{Session::has('error')}}';
+        if(exist){
+            // swal("Yay", msg + " is successfully created!", "success");
+            swal({
+                title: "Opps...",
+                text: "Wrong email or password",
+                icon: "error"
+            }).then(function() {
+                window.location = "/login";
+            });
+        }
+</script>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
@@ -36,8 +48,8 @@
 WELCOME TO ADOPET <br> <br>
 Login <br>
 					</span>					
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
-						<span class="label-input100">Username</span>
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Email is required">
+						<span class="label-input100">Email</span>
 						<input class="input100" type="text" name="username" placeholder="Type your username">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
@@ -62,9 +74,9 @@ Login
 							</button>
 						</div>
 					</div>	
-					@if($message = Session::get('error'))		
+					<!-- @if($message = Session::get('error'))		
 						<p>{{$message}}</p>
-					@endif		
+					@endif		 -->
 					<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
 							Or Sign Up Using

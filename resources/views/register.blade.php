@@ -97,11 +97,11 @@
 							<textarea id="txtAddress" name="address" placeholder="address"></textarea>
 
                             <div id="gender">
-                                <input id="rbMale" type="radio" name="gender" value="male">Male
-                                <input id="rbFemale" type="radio" name="gender" value="female" style="margin-left:30%">Female
+                                <input id="rbMale" type="radio" name="gender" value="male"><label for="rbMale">Male</label>
+                                <input id="rbFemale" type="radio" name="gender" value="female" style="margin-left:30%"><label for="rbFemale">Female</label>
                             </div>
 
-							<div id="agreement"><input id="cbxAgree" type="checkbox" name="agreement"> I agree with the terms and conditions</div>
+							<div id="agreement"><input id="cbxAgree" type="checkbox" name="agreement"><label for="cbxAgree"> agree with the terms and conditions</label></div>
 
                             <div class="container-login100-form-btn">
                                 <div class="wrap-login100-form-btn">
