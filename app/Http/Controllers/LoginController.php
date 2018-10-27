@@ -16,7 +16,7 @@ class LoginController extends Controller
         if(count($data) != 0){
             $bool = Hash::check($pass, $data[0]->password);        
             if($bool){
-                return view("master/index");
+                return view("master/home");
                 //return back()->with('error', $data);
             }
             else{

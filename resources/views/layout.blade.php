@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     @yield('head')
 </head>
