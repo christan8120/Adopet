@@ -57,19 +57,19 @@
                 @if(count($pets) > 0)
                     @foreach($pets as $pet)
                     <div class="col-lg-3 col-md-4 col-xs-6">
-                        <img id="myImg{{$pet->pet_id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="">
+                        <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="">
                     </div>
 
-                    <div id="myModal{{$pet->pet_id}}" class="modal">
+                    <div id="myModal{{$pet->id}}" class="modal">
                     <!-- Modal content -->
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="col-md-8">
-                            <img class="img-fluid" id="alt_{{$pet->pet_id}}" src="{{asset($pet->picture_src)}}" alt="">
+                            <img class="img-fluid" id="alt_{{$pet->id}}" src="{{asset($pet->picture_src)}}" alt="">
                         </div>
 
                         <div class="col-md-4">
-                            <h3 class="my-3">Pet Description</h3>
+                            <h3 class="my-3">{{$pet->category->category_name}} Description</h3>
                             <p>{{$pet->description}}</p>
                             <!-- <h3 class="my-3">Project Details</h3> -->
                             <!--  <ul>

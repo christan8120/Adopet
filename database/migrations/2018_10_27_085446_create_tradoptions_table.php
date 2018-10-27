@@ -14,7 +14,7 @@ class CreateTradoptionsTable extends Migration
     public function up()
     {
         Schema::create('tradoptions', function (Blueprint $table) {
-            $table->increments('tr_id');
+            $table->increments('id');
             $table->integer('userOwner');
             $table->integer('userAdopter');
             $table->date('transaction_date');
