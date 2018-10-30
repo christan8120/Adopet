@@ -37,16 +37,16 @@ class PetSeeder extends Seeder
             'audit_activity' => 'I',
         ]);
 
-        // DB::table('pets')->insert([
-        //     'category_id' => 3,
-        //     'pet_name' => 'hamsty',
-        //     'userOwner' => 10,
-        //     'age' => 3, //in month
-        //     'gender' => 'Male',
-        //     'status' => 0,
-        //     'picture_src' => "image/pet/hamster/1.jpg",
-        //     'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
-        //     'audit_activity' => 'I',
-        // ]);
+        DB::table('pets')->insert([
+            'category_id' => 3,
+            'pet_name' => 'hamsty',
+            'userOwner' => 10,
+            'age' => 3, //in month
+            'gender' => 'Male',
+            'status' => 0,
+            'picture_src' => "image/pet/hamster/1.jpg",
+            'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
+            'audit_activity' => 'I',
+        ]);
     }
 }

@@ -57,12 +57,12 @@
 
     <div class="limiter">
         <div class="container-login100">
-            <div class="wrap-login100">
+            <div class="wrap-login100" style="text-align:center;">
 
                 @if(count($pets) > 0)
                     @foreach($pets as $pet)
                     <div class="col-lg-3 col-md-4 col-xs-6">
-                        <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="">
+                        <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="" onclick="imgOnClick({{$pet->id}})">
                     </div>
 
                     <div id="myModal{{$pet->id}}" class="modal">
