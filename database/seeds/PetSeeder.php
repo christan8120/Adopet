@@ -14,27 +14,39 @@ class PetSeeder extends Seeder
     {
         //
         DB::table('pets')->insert([
-            'category_id' => 1,
-            'pet_name' => 'doggy',
+            'category_id' => 4,
+            'pet_name' => 'rabity',
             'userOwner' => 10,
             'age' => 5, //in month
-            'gender' => 'Male',
+            'gender' => 'Female',
             'status' => 0,
-            'picture_src' => "image/pet/dog/1.jpg",
+            'picture_src' => "image/pet/rabbit/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
         ]);
 
         DB::table('pets')->insert([
-            'category_id' => 2,
-            'pet_name' => 'catty',
+            'category_id' => 4,
+            'pet_name' => 'rabito',
             'userOwner' => 10,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
-            'picture_src' => "image/pet/cat/1.jpg",
+            'picture_src' => "image/pet/rabbit/1.JPG",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
         ]);
+
+        // DB::table('pets')->insert([
+        //     'category_id' => 3,
+        //     'pet_name' => 'hamsty',
+        //     'userOwner' => 10,
+        //     'age' => 3, //in month
+        //     'gender' => 'Male',
+        //     'status' => 0,
+        //     'picture_src' => "image/pet/hamster/1.jpg",
+        //     'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
+        //     'audit_activity' => 'I',
+        // ]);
     }
 }

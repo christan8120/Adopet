@@ -46,8 +46,13 @@
             cursor: pointer;
         }
         .img-fluid{
-            width:100%;
+            width:250px;
+            height:250px;
+            margin:1%;
         }
+        
+
+
     </style>
 
     <div class="limiter">

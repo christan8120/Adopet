@@ -9,6 +9,20 @@ $( document ).ready(function() {
     $('#myImg2').click(()=>{
         $('#myModal2').css("display", "block");
     });
+//harusnya ini id 5 tpi gw ubah manual di dbnya (yg dbawah)
+    $('#myImg3').click(()=>{
+        $('#myModal3').css("display", "block");
+    });
+//ini idnya lanjutan dr looping for d petseeder.php gw ga tau mau gmna lg jd ya gw ikutin aja(yg dbawah)
+    $('#myImg6').click(()=>{
+        $('#myModal6').css("display", "block");
+    });
+
+    $('#myImg7').click(()=>{
+        $('#myModal7').css("display", "block");
+    });
+
+
     $('.close').click(()=>{
         $('.modal').css('display','none');
     });
