@@ -46,25 +46,32 @@
             cursor: pointer;
         }
         .img-fluid{
-            width:250px;
-            height:250px;
-            margin:1%;
+                width:30%;
+                height:170px;
+                margin:1%;
+            }
+        @media(max-width: 576px){
+            .img-fluid{
+                width:30%;
+                height:100px;
+                margin:1%;
+            }
         }
-        
 
 
     </style>
 
     <div class="limiter">
         <div class="container-login100">
-            <div class="wrap-login100" style="text-align:center;">
+            <div class="wrap-login100">
 
                 @if(count($pets) > 0)
-                    @foreach($pets as $pet)
                     <div class="col-lg-3 col-md-4 col-xs-6">
-                        <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="" onclick="imgOnClick({{$pet->id}})">
+                    @foreach($pets as $pet)                    
+                        <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="" onclick="imgOnClick({{$pet->id}})">                    
+                    @endforeach
                     </div>
-
+                    @foreach($pets as $pet)
                     <div id="myModal{{$pet->id}}" class="modal">
                     <!-- Modal content -->
                     <div class="modal-content">

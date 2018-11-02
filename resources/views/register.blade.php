@@ -47,7 +47,7 @@
             }
             return true;
         }
-
+        
         var msg = '{{Session::get('alert')}}';
         var exist = '{{Session::has('alert')}}';
         if(exist){
@@ -57,7 +57,7 @@
                 text: msg + " is successfully created!",
                 icon: "success"
             }).then(function() {
-                window.location = "/login";
+                window.location = "/";
             });
         }
     </script>
@@ -87,7 +87,7 @@
 					</div>
 
 					<div class="content-form">
-						<form action="{{action('Auth\RegisterController@store')}}" method="post" onsubmit="return Submit()">
+						<form action="/register" method="post" onsubmit="return Submit()">
                             @csrf
 							<input id="txtName" type="text" name="name" placeholder="Full name"><br>
 							<input id="txtPassword" type="password" name="password" placeholder="password"><br>

@@ -34,7 +34,7 @@ var exist = '{{Session::has('error')}}';
                 text: "Wrong email or password",
                 icon: "error"
             }).then(function() {
-                window.location = "/login";
+                window.location = "/";
             });
         }
 </script>
@@ -50,7 +50,7 @@ Login <br>
 					</span>					
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Email is required">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="username" placeholder="Type your username">
+						<input class="input100" type="email" name="username" placeholder="Type your email">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
