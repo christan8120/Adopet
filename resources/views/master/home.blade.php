@@ -46,6 +46,7 @@
             cursor: pointer;
         }
         .img-fluid{
+<<<<<<< HEAD
                 width:30%;
                 height:170px;
                 margin:1%;
@@ -57,27 +58,62 @@
                 margin:1%;
             }
         }
+=======
+            width:30%;
+            height:170px;
+            margin:1%;
+        }
+        
+        .img-fluid-modal{
+                width:300px;
+                height:300px;
+                margin:1%;
+            }
+
+
+        @media(max-width: 576px){
+            .img-fluid{
+                width:30%;
+                height:100px;
+                margin:1%;
+            }
+
+            .img-fluid-modal{
+                width:170px;
+                height:170px;
+                margin:1%;
+            }
+        }
+>>>>>>> f5f4ce18594124a208d7d345e101bf7473825e4f
 
 
     </style>
-
+    
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
 
                 @if(count($pets) > 0)
                     <div class="col-lg-3 col-md-4 col-xs-6">
+<<<<<<< HEAD
                     @foreach($pets as $pet)                    
                         <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="" onclick="imgOnClick({{$pet->id}})">                    
                     @endforeach
                     </div>
+=======
+                    @foreach($pets as $pet)
+                        <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="" onclick="imgOnClick({{$pet->id}})">
+                    @endforeach
+                    </div>
+                    
+>>>>>>> f5f4ce18594124a208d7d345e101bf7473825e4f
                     @foreach($pets as $pet)
                     <div id="myModal{{$pet->id}}" class="modal">
                     <!-- Modal content -->
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="col-md-8">
-                            <img class="img-fluid" id="alt_{{$pet->id}}" src="{{asset($pet->picture_src)}}" alt="">
+                            <img class="img-fluid-modal" id="alt_{{$pet->id}}" src="{{asset($pet->picture_src)}}" alt="">
                         </div>
 
                         <div class="col-md-4">
@@ -96,62 +132,7 @@
                     </div>
                     @endforeach
                 @endif
-                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-
-                    <img id="myImg1" class="img-fluid img-thumbnail" src="{{asset('image/pet/cat/1.jpg')}}" alt="">
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <img id="myImg2" class="img-fluid img-thumbnail" src="{{asset('image/pet/cat/2.jpg')}}" alt="">
-                </div> -->
-
-                <!-- <div id="myModal1" class="modal"> -->
-
-                    <!-- Modal content -->
-                    <!-- <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <div class="col-md-8">
-                            <img class="img-fluid" id="alt_1" src="{{asset('image/pet/cat/1.jpg')}}" alt="">
-                        </div>
-
-                        <div class="col-md-4">
-                            <h3 class="my-3">Project Description</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                             <h3 class="my-3">Project Details</h3> -->
-                            <!--  <ul>
-                               <li>Lorem Ipsum</li>
-                               <li>Dolor Sit Amet</li>
-                               <li>Consectetur</li>
-                               <li>Adipiscing Elit</li>
-                             </ul> -->
-                        <!-- </div>
-                    </div>
-
-                </div>  -->
-
-                <!-- The Modal -->
-                <!-- <div id="myModal2" class="modal"> -->
-
-                    <!-- Modal content -->
-                    <!-- <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <div class="col-md-8">
-                            <img class="img-fluid" id="alt_1" src={{asset('image/pet/cat/2.jpg')}} alt="">
-                        </div>
-
-                        <div class="col-md-4">
-                            <h3 class="my-3">Project Description</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                            <h3 class="my-3">Project Details</h3>
-                            <ul>
-                                <li>Lorem Ipsum</li>
-                                <li>Dolor Sit Amet</li>
-                                <li>Consectetur</li>
-                                <li>Adipiscing Elit</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div> -->
+                
             </div>
         </div>
     </div>
