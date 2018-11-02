@@ -46,19 +46,6 @@
             cursor: pointer;
         }
         .img-fluid{
-<<<<<<< HEAD
-                width:30%;
-                height:170px;
-                margin:1%;
-            }
-        @media(max-width: 576px){
-            .img-fluid{
-                width:30%;
-                height:100px;
-                margin:1%;
-            }
-        }
-=======
             width:30%;
             height:170px;
             margin:1%;
@@ -84,7 +71,6 @@
                 margin:1%;
             }
         }
->>>>>>> f5f4ce18594124a208d7d345e101bf7473825e4f
 
 
     </style>
@@ -95,18 +81,11 @@
 
                 @if(count($pets) > 0)
                     <div class="col-lg-3 col-md-4 col-xs-6">
-<<<<<<< HEAD
-                    @foreach($pets as $pet)                    
-                        <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="" onclick="imgOnClick({{$pet->id}})">                    
-                    @endforeach
-                    </div>
-=======
                     @foreach($pets as $pet)
                         <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="" onclick="imgOnClick({{$pet->id}})">
                     @endforeach
                     </div>
                     
->>>>>>> f5f4ce18594124a208d7d345e101bf7473825e4f
                     @foreach($pets as $pet)
                     <div id="myModal{{$pet->id}}" class="modal">
                     <!-- Modal content -->
