@@ -6,7 +6,7 @@
     }
 </style>
 <head>
-    @yield('title')
+    <title>@yield('title')</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{asset('image/logo.ico')}}">

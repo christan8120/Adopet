@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-Informasi Klinik
+informasi klinik
 
 @endsection
 
