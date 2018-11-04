@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('masterpage/main-layout')
 @section('title','Adopet')
 
 @section('content')
@@ -23,7 +23,7 @@
         }
 
         /* Modal Content */
-        .modal-content {
+        .modal-content-1 {
             background-color: #fefefe;
             margin: auto;
             padding: 20px;
@@ -32,31 +32,46 @@
         }
 
         /* The Close Button */
-        .close {
+        .close-1 {
             color: #aaaaaa;
             float: right;
             font-size: 28px;
             font-weight: bold;
         }
 
-        .close:hover,
-        .close:focus {
+        .close-1:hover,
+        .close-1:focus {
             color: #000;
             text-decoration: none;
             cursor: pointer;
         }
+
+        /* ------ */
         .img-fluid{
             width:30%;
-            height:170px;
+            height:300px;
             margin:1%;
         }
         
         .img-fluid-modal{
-                width:300px;
-                height:300px;
-                margin:1%;
-            }
+            width:300px;
+            height:300px;
+            margin:1%;
+        }
+        
+        .header{
+            width: 100%;
+            height: 50%;
+        }
 
+        .header-logo{
+            text-align: center;
+        }
+
+        .header-logo img{
+            width:90vw;
+            max-width: 500px;
+        }
 
         @media(max-width: 576px){
             .img-fluid{
@@ -77,10 +92,15 @@
     
     <div class="limiter">
         <div class="container-login100">
-            <div class="wrap-login100">
-
+            <!-- <div class="wrap-login100"> -->
+                <header>
+                    <div class="header-logo">
+                        <img src="{{asset('image/logo/logo.png')}}">
+                    </div>
+                </header>
+                
                 @if(count($pets) > 0)
-                    <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="">
                     @foreach($pets as $pet)
                         <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="" onclick="imgOnClick({{$pet->id}})">
                     @endforeach
@@ -89,14 +109,14 @@
                     @foreach($pets as $pet)
                     <div id="myModal{{$pet->id}}" class="modal">
                     <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <div class="col-md-8">
+                    <div class="modal-content-1">
+                        <span class="close-1">&times;</span>
+                        <div class="">
                             <img class="img-fluid-modal" id="alt_{{$pet->id}}" src="{{asset($pet->picture_src)}}" alt="">
                         </div>
 
-                        <div class="col-md-4">
-                            <h3 class="my-3">{{$pet->category->category_name}} Description</h3>
+                        <div class="">
+                            <h3 class="">{{$pet->category->category_name}} Description</h3>
                             <p>{{$pet->description}}</p>
                             <!-- <h3 class="my-3">Project Details</h3> -->
                             <!--  <ul>
@@ -112,7 +132,7 @@
                     @endforeach
                 @endif
                 
-            </div>
+            <!-- </div> -->
         </div>
     </div>
 

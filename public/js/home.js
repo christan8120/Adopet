@@ -1,32 +1,10 @@
-
-
 function imgOnClick(id){
     var xid = "#myModal"+id;
     $(xid).css("display", "block");
 }
 $( document ).ready(function() {        
-//     $('#myImg1').click(()=>{
-//         $('#myModal1').css("display", "block");
-//     });
 
-//     $('#myImg2').click(()=>{
-//         $('#myModal2').css("display", "block");
-//     });
-// //harusnya ini id 5 tpi gw ubah manual di dbnya (yg dbawah)
-//     $('#myImg3').click(()=>{
-//         $('#myModal3').css("display", "block");
-//     });
-// //ini idnya lanjutan dr looping for d petseeder.php gw ga tau mau gmna lg jd ya gw ikutin aja(yg dbawah)
-//     $('#myImg6').click(()=>{
-//         $('#myModal6').css("display", "block");
-//     });
-
-//     $('#myImg7').click(()=>{
-//         $('#myModal7').css("display", "block");
-//     });
-
-
-    $('.close').click(()=>{
+    $('.close-1').click(()=>{
         $('.modal').css('display','none');
     });
 
@@ -41,16 +19,33 @@ $( document ).ready(function() {
     }
 });
 
-// When the user clicks the button, open the modal
-
-// $('#myImg3').click(()=>{
-//     $('#myModal3').css("display", "block");
-// });
-//
-// $('#myImg4').click(()=>{
-//     $('#myModal4').css("display", "block");
-// });
-// $('#myImg5').click(()=>{
-//     $('#myModal5').css("display", "block");
-// });
-
+// scrolling nav tapi ngga ngefek.
+(function($) {
+    "use strict"; // Start of use strict
+  
+    // Smooth scrolling using jQuery easing
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: (target.offset().top - 54)
+          }, 1000, "easeInOutExpo");
+          return false;
+        }
+      }
+    });
+  
+    // Closes responsive menu when a scroll trigger link is clicked
+    $('.js-scroll-trigger').click(function() {
+      $('.navbar-collapse').collapse('hide');
+    });
+  
+    // Activate scrollspy to add active class to navbar items on scroll
+    $('body').scrollspy({
+      target: '#mainNav',
+      offset: 54
+    });
+  
+  })(jQuery);
