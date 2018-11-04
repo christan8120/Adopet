@@ -18,6 +18,7 @@ class PetSeeder extends Seeder
             'pet_name' => 'rabity',
             'userOwner' => 10,
             'age' => 5, //in month
+            
             'gender' => 'Female',
             'status' => 0,
             'picture_src' => "image/pet/rabbit/2.jpg",

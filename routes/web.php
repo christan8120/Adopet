@@ -17,6 +17,11 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/informasi', function () {
+    return view('informasi');
+});
+
 Route::post('/login/submit', 'LoginController@login');
 Route::post('/register', 'LoginController@register');
 Route::get('/index', 'PetController@index');

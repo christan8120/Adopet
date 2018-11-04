@@ -65,6 +65,7 @@
         }
 
         .header-logo{
+            margin-top:60px;
             text-align: center;
         }
 
@@ -72,6 +73,10 @@
             width:90vw;
             max-width: 500px;
         }
+
+        /* .nav-item{
+            text-decoration: none;
+        } */
 
         @media(max-width: 576px){
             .img-fluid{

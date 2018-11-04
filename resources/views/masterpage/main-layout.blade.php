@@ -29,13 +29,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">Adopt Us</a>
+              <a href="/index">Adopt Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">Clinic</a>
+              <a href="/informasi">Informasi Klinik</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">Find Love!</a>
+              <a href="#">Find Love!</a>
             </li>
           </ul>
         </div>
