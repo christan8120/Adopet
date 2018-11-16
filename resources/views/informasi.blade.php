@@ -1,12 +1,8 @@
-@extends('layout')
-<!-- @extends('masterpage/main-layout') -->
+@extends('masterpage.main-layout')
 
 @section('title')
 informasi klinik
-
 @endsection
-
-
 
 @section('content')
 <div class="container">
