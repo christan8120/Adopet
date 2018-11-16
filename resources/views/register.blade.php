@@ -3,6 +3,7 @@
 
 @section('head')
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/login/register.css')}}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
 
 @section('content')
