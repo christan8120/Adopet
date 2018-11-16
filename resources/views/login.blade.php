@@ -22,6 +22,7 @@
 <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/login/util.css')}}">
 <!--===============================================================================================-->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
 
 @section('content')
