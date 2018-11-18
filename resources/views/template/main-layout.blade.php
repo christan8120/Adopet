@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    body, html {
-        height: 100%;
-    }
-</style>
 <head>
     <title>@yield('title')</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
-    <link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.css')}}">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>    
-
-    @yield('head')
+    
+    <script type="text/javascript" src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>        
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">            
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">     
+    <link rel="stylesheet" type="text/css" href="{{asset('css/login/util.css')}}">   
+    
 </head>
 
 <body id="page-top">
@@ -45,15 +37,6 @@
       </div>
     </nav>
 
-    <header>
-
-    
-
-    </header>
-
-    
-	
-
     <main>
         <!-- Content goes here -->
         @yield('content')
@@ -72,7 +55,6 @@
                 <img src="{{URL::asset('image/logo/instagram.png')}}" width="25" height="25">
             </a>
         </div>
-
     </div>
 </body>
 

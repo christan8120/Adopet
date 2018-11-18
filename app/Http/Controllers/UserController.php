@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
-class LoginController extends Controller
+class UserController extends Controller
 {
     //
     public function login(Request $req){        
@@ -27,7 +27,7 @@ class LoginController extends Controller
             // return redirect()->back()->with('error', "Login Failed");
             return redirect('/index');
         }
-        dd($data);
+        //dd($data);
         return redirect()->back()->with('error', "Login Failed");
     }
 
@@ -53,6 +53,7 @@ class LoginController extends Controller
     }
     
     public function signout(){              
+        //Note: lom ada signout button ? 
         return view("/");
     }
 }

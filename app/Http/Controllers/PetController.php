@@ -10,6 +10,6 @@ class PetController extends Controller
     //
     public function index(){
         $pets = Pet::all();
-        return view('master.home', ['pets'=>$pets]);
+        return view('home', ['pets'=>$pets]);
     }
 }

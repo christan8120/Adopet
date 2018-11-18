@@ -622,7 +622,7 @@ pre code {
   overflow-y: scroll;
 }
 
-.container {
+.main-container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -631,25 +631,26 @@ pre code {
 }
 
 @media (min-width: 576px) {
-  .container {
+  .main-container {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .main-container {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  .main-container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .main-container 
+  {    
     max-width: 1140px;
   }
 }

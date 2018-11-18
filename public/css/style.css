@@ -34,7 +34,8 @@
 }
 
 body, html {
-	font-family: Poppins-Regular, sans-serif;
+  font-family: Poppins-Regular, sans-serif;
+  height: 100%;
 }
 
 /*---------------------------------------------*/
@@ -488,4 +489,15 @@ iframe {
 .footer-title
 {
     text-align: center;
+}
+
+/*----------------*/
+#page-top
+{
+    height: 90vh;
+}
+
+.main-container
+{
+    min-height: 90vh;
 }

@@ -1,54 +1,11 @@
-@extends('layout')
+@extends('template.login-layout')
 @section('title','Registrasi Adopet')
 
-@section('head')
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/login/register.css')}}">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-@endsection
-
 @section('content')
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/login/register.css')}}">             
+    <script src="{{asset('js/register.js')}}"></script>
+    
     <script>
-        function Submit(){
-            var txtName = $('#txtName');
-            var txtAddress = $('#txtAddress');
-            var txtEmail = $('#txtEmail');
-            var txtPassword = $('#txtPassword');
-            var txtPassword2 = $('#txtPassword2');
-            var rbFemale = $('#rbFemale');
-            var rbMale = $('#rbMale');
-            var cbxAgree = $('#cbxAgree');
-
-            if(txtName.val().length < 5){
-                swal("","Your name needs to be at least 5 chars!", "error");
-                return false;
-            }
-            else if(txtPassword.val()===""){
-                swal("","Your password hasn't been filled", "error");
-                return false;
-            }
-            else if(txtPassword.val()!==txtPassword2.val()){
-                swal("","Your passwords don't match", "error");
-                return false;
-            }
-            else if(txtEmail.val()===""){
-                swal("","Your email hasn't been filled", "error");
-                return false;
-            }
-            else if(txtAddress.val()===""){
-                swal("","Your address hasn't been filled", "error");
-                return false;
-            }
-            else if(!rbMale.prop('checked') && !rbFemale.prop('checked')){
-                swal("","Your haven't chosen your gender!", "error");
-                return false;
-            }
-            else if(!cbxAgree.prop('checked')){
-                swal("","Your have not checked the terms and conditions", "error");
-                return false;
-            }
-            return true;
-        }
-        
         var msg = '{{Session::get('alert')}}';
         var exist = '{{Session::has('alert')}}';
         if(exist){
@@ -73,22 +30,17 @@
         </div>
     @endif
 
-
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="container wrap-login100">
-				<div class="header">
-					<div class="header-logo">
-						<a href="/login"><img src="{{URL::asset('image/logo/logo.png')}}" ></a>
-					</div>
-				</div>
-				<div class="content">
-					<div class="content-title">
-						Register Form
-					</div>
-
-					<div class="content-form">
-						<form action="/register" method="post" onsubmit="return Submit()">
+			<div class="wrap-login100">                                                
+				<div class="content">					
+					<div class="content-form p-t-65 ">
+                        <div class="login100-form-title p-b-49 content-title">
+                            <a href="/"><img src="{{asset('image/logo/logo.png')}}" height="100%" , width="100%"></a> <br><br>
+						    WELCOME TO ADOPET <br> <br>
+						    Register Form <br>
+                        </div>
+						<form action="/register" method="post" onsubmit="return Submit()" class="login100-form validate-form">
                             @csrf
 							<input id="txtName" type="text" name="name" placeholder="Full name"><br>
 							<input id="txtPassword" type="password" name="password" placeholder="password"><br>
@@ -112,9 +64,7 @@
                                     </button>
                                 </div>
                             </div>
-
 						</form>
-
 					</div>
 				</div>
 			</div>

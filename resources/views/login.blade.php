@@ -1,53 +1,31 @@
-@extends('layout')
-@section('title','Adopet')
+@extends('template.login-layout')
+@section('title','Login')
 
-@section('head')
-	<link rel="icon" type="image/png" href="{{asset('image/logo/logo.png')}}"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap/css/bootstrap.min.css')}}">
-<!--===============================================================================================-->
+@section('content')	
 	<link rel="stylesheet" type="text/css" href="{{asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{asset('fonts/iconic/css/material-design-iconic-font.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{asset('vendor/animate/animate.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{asset('vendor/css-hamburgers/hamburgers.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{asset('vendor/animsition/css/animsition.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{asset('vendor/select2/select2.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{asset('vendor/daterangepicker/daterangepicker.css')}}">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('css/login/util.css')}}">
-<!--===============================================================================================-->
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-@endsection
+	<link rel="stylesheet" type="text/css" href="{{asset('fonts/iconic/css/material-design-iconic-font.min.css')}}">		    
 
-@section('content')
-<script>
-var exist = '{{Session::has('error')}}';
-        if(exist){
-            // swal("Yay", msg + " is successfully created!", "success");
-            swal({
-                title: "Opps...",
-                text: "Wrong email or password",
-                icon: "error"
-            }).then(function() {
-                window.location = "/";
-            });
-        }
-</script>
+	<script>
+	var exist = '{{Session::has('error')}}';
+		if(exist){			
+			swal({
+				title: "Opps...",
+				text: "Wrong email or password",
+				icon: "error"
+			}).then(function() {
+				window.location = "/";
+			});
+		}
+	</script>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form" method="post" action="/login/submit">
 				{{csrf_field()}}
 					<span class="login100-form-title p-b-49">
-					<img src="{{asset('image/logo/logo.png')}}" height="100%" , width="100%"> <br><br>
-WELCOME TO ADOPET <br> <br>
-Login <br>
+						<img src="{{asset('image/logo/logo.png')}}" height="100%" , width="100%"> <br><br>
+						WELCOME TO ADOPET <br> <br>
+						Login <br>
 					</span>					
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Email is required">
 						<span class="label-input100">Email</span>
@@ -63,7 +41,7 @@ Login <br>
 
 					<div class="text-right p-t-8 p-b-31">
 						<a href="#">
-    Forgot password?
+    						Forgot password?
 						</a>
 					</div>
 
@@ -71,17 +49,14 @@ Login <br>
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-Login
+								Login
 							</button>
 						</div>
 					</div>	
-					<!-- @if($message = Session::get('error'))		
-						<p>{{$message}}</p>
-					@endif		 -->
 					<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
 							Or Sign Up Using
-</span>
+						</span>
 					</div>
 
 					<div class="flex-c-m">
@@ -107,22 +82,12 @@ Login
 			</div>
 		</div>
 	</div>
+	<script src="{{asset("js/login/main.js")}}"></script>
+@endsection
 
-<!--===============================================================================================-->
-	<script src="{{asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
+	<!-- <script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>	
 	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
 	<script src="vendor/daterangepicker/moment.min.js"></script>
 	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="{{asset("js/login/main.js")}}"></script>
-
-@endsection
+	<script src="vendor/countdowntime/countdowntime.js"></script> -->
