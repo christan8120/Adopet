@@ -8,15 +8,12 @@ $( document ).ready(function() {
         $('.modal').css('display','none');
     });
 
-    // Get the modal
-    var modal = document.getElementsByClassName('modal');
-
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    $(window).click((event)=>{
+        if ($(event.target).is($("[id^='myModal']"))) {
+          $('.modal').css('display','none');
         }
-    }
+    });
 });
 
 // scrolling nav tapi ngga ngefek.
