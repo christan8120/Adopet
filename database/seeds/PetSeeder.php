@@ -20,7 +20,7 @@ class PetSeeder extends Seeder
             'age' => 5, //in month
             
             'gender' => 'Female',
-            'status' => 0,
+            'status' => 0, //0 berarti lom di adopt ama manusia
             'picture_src' => "image/pet/rabbit/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',

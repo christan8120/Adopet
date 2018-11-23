@@ -19,3 +19,4 @@ Route::post('/login/submit', 'UserController@login');
 Route::post('/register', 'UserController@register');
 
 Route::get('/index', 'PetController@index');
+Route::get('/adoptIt/{id}', 'PetController@adoptIt');

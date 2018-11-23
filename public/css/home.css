@@ -84,3 +84,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         margin:1%;
     }
 }
+
+#confirm-yes, #confirm-no{
+    display: none;
+}

@@ -46,3 +46,22 @@ $( document ).ready(function() {
     });
   
   })(jQuery);
+
+  var isShowPanel = false;
+  function confirmationPanel()
+  {
+    if(!isShowPanel){
+      isShowPanel = true;
+      $('#confirm-adopt-button').css("display", "none");
+      $('#confirm-no, #confirm-yes').css("display", "inline-block");
+    }
+    else{
+      isShowPanel = false;
+      $('#confirm-adopt-button').css("display", "block");
+      $('#confirm-no, #confirm-yes').css("display", "none");
+    }
+  }
+
+  function confirmAdopt(id){        
+    window.location = "/adoptIt/"+ id;
+  }//

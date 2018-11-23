@@ -13,7 +13,7 @@
                 </header>
                 
                 @if(count($pets) > 0)
-                    <div class="">
+                    <div class="text-center">
                     @foreach($pets as $pet)
                         <img id="myImg{{$pet->id}}" class="img-fluid img-thumbnail" src="{{asset($pet->picture_src)}}" alt="" onclick="imgOnClick({{$pet->id}})">
                     @endforeach
@@ -32,7 +32,12 @@
                             <h3 class="">{{$pet->category->category_name}} Description</h3>
                             <p>{{$pet->description}}</p>                            
                         </div>
+                        <button  type="button" class="btn btn-primary" id="confirm-adopt-button" onclick="confirmationPanel();">Adopt</button>
+                        <button  type="button" class="btn btn-primary" id="confirm-yes" onclick="confirmAdopt({{$pet->id}});">Yes</button>
+                        <button  type="button" class="btn btn-primary" id="confirm-no" onclick="confirmationPanel();">No</button>
                     </div>
+
+                    
 
                     </div>
                     @endforeach
