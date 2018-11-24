@@ -22,4 +22,9 @@ class PageController extends Controller
     {
         return view('informasi');
     }
+
+    public function findlove()
+    {
+        return view('findlove');
+    }
 }

@@ -31,7 +31,7 @@
               <a class="nav-link" href="/informasi">Informasi Klinik</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Find Love!</a>
+              <a class="nav-link" href="/findlove">Find Love!</a>
             </li>
           </ul>
         </div>
