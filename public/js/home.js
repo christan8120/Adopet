@@ -1,4 +1,9 @@
+var isShowPanel = false;
+
 function imgOnClick(id){
+  isShowPanel = false;
+  $('.confirm-adopt-button').css("display", "block");
+  $('.confirm-no, .confirm-yes').css("display", "none");
     var xid = "#myModal"+id;
     $(xid).css("display", "block");
 }
@@ -46,19 +51,18 @@ $( document ).ready(function() {
     });
   
   })(jQuery);
-
-  var isShowPanel = false;
+  
   function confirmationPanel()
   {
     if(!isShowPanel){
       isShowPanel = true;
-      $('#confirm-adopt-button').css("display", "none");
-      $('#confirm-no, #confirm-yes').css("display", "inline-block");
+      $('.confirm-adopt-button').css("display", "none");
+      $('.confirm-no, .confirm-yes').css("display", "inline-block");
     }
     else{
       isShowPanel = false;
-      $('#confirm-adopt-button').css("display", "block");
-      $('#confirm-no, #confirm-yes').css("display", "none");
+      $('.confirm-adopt-button').css("display", "block");
+      $('.confirm-no, .confirm-yes').css("display", "none");
     }
   }
 

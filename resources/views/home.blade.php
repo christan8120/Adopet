@@ -24,7 +24,7 @@
                     <!-- Modal content -->
                     <div class="modal-content-1">
                         <span class="close-1">&times;</span>
-                        <div class="">
+                        <div class="text-center">
                             <img class="img-fluid-modal" id="alt_{{$pet->id}}" src="{{asset($pet->picture_src)}}" alt="">
                         </div>
 
@@ -32,9 +32,11 @@
                             <h3 class="">{{$pet->category->category_name}} Description</h3>
                             <p>{{$pet->description}}</p>                            
                         </div>
-                        <button  type="button" class="btn btn-primary" id="confirm-adopt-button" onclick="confirmationPanel();">Adopt</button>
-                        <button  type="button" class="btn btn-primary" id="confirm-yes" onclick="confirmAdopt({{$pet->id}});">Yes</button>
-                        <button  type="button" class="btn btn-primary" id="confirm-no" onclick="confirmationPanel();">No</button>
+                        <button  type="button" class="btn btn-primary confirm-adopt-button" onclick="confirmationPanel();">Adopt</button>
+                        <div class="text-center">
+                            <button  type="button" class="btn btn-primary confirm-yes" onclick="confirmAdopt({{$pet->id}});">Yes</button>
+                            <button  type="button" class="btn btn-primary confirm-no" onclick="confirmationPanel();">No</button>
+                        </div>
                     </div>
 
                     
