@@ -23,12 +23,12 @@ class UserController extends Controller
             //dd(!Auth::attempt($data));
             return redirect()->back()->with('error', "Login Failed");
         }
-        if(Auth::attempt($data)){            
+        else{            
             // return redirect()->back()->with('error', "Login Failed");
             return redirect('/index');
         }
         //dd($data);
-        return redirect()->back()->with('error', "Login Failed");
+        //return redirect()->back()->with('error', "Login Failed");
     }
 
     public function register(Request $request)

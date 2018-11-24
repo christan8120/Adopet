@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'admin',
             'password' => Hash::make('admin'),
-            'email' => $faker->unique()->safeEmail,
+            'email' => 'admin@admin.com',
             'address' => $faker->address,
             'gender' => 'Male',
 //            'email_verified_at' => Carbon::now()

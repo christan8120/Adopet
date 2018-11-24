@@ -29,7 +29,7 @@ class CategoriesSeeder extends Seeder
         ]);
 
         DB::table('categories')->insert([
-            'category_name' => 'Rabit',
+            'category_name' => 'Rabbit',
             'audit_activity' => 'I',
         ]);
     }

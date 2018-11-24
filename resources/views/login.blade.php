@@ -12,8 +12,6 @@
 				title: "Opps...",
 				text: "Wrong email or password",
 				icon: "error"
-			}).then(function() {
-				window.location = "/";
 			});
 		}
 	</script>

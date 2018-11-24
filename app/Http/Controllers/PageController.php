@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class PageController extends Controller
 {
@@ -26,5 +27,9 @@ class PageController extends Controller
     public function findlove()
     {
         return view('findlove');
+    }
+    public function signout(Request $request){
+        // Auth::logout();
+        return redirect('/');
     }
 }
