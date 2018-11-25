@@ -5,12 +5,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">    
 
     <div class="limiter">
-        <div class="main-container">            
-                <header class="m-b-50">
-                    <div class="header-logo">
-                        <img src="{{asset('image/logo/logo.png')}}">
-                    </div>
-                </header>
+        <div class="main-container">
                 
                 @if(count($pets) > 0)
                     <div class="text-center">

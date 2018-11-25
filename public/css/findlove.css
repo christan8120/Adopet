@@ -31,7 +31,7 @@
     overflow: hidden;
     position: relative;
     height: 47rem;
-    padding-top: 4.5rem;
+    /* padding-top: 4.5rem; */
     user-select: none;
   }
   .demo__card-cont {
@@ -194,7 +194,7 @@
         overflow: hidden;
         position: relative;
         height: 47rem;
-        padding-top: 4.5rem;
+        /* padding-top: 4.5rem; */
         user-select: none;
       }
       .demo__card-cont {
