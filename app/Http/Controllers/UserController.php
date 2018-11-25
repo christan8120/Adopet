@@ -52,8 +52,8 @@ class UserController extends Controller
         return redirect()->back() ->with('alert', $input);
     }
     
-    public function signout(){              
-        //Note: lom ada signout button ? 
-        return view("/");
+    public function signout(){                      
+        Auth::logout();        
+        return redirect('/');
     }
 }

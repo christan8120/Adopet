@@ -28,8 +28,4 @@ class PageController extends Controller
     {
         return view('findlove');
     }
-    public function signout(Request $request){
-        // Auth::logout();
-        return redirect('/');
-    }
 }

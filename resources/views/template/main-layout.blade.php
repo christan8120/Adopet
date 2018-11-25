@@ -15,7 +15,9 @@
 </head>
 
 <body id="page-top">
-    
+    @if(!Auth::check())
+      <script>window.location = '/';</script>
+    @endif    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Adopet</a>

@@ -23,4 +23,4 @@ Route::get('/adoptIt/{id}', 'PetController@adoptIt');
 
 Route::get('/findlove', 'PageController@findlove');
 
-Route::get('/signout','PageController@signout');
+Route::get('/signout','UserController@signout');
