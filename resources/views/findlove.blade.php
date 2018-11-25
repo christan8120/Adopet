@@ -4,17 +4,16 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{asset('css/findlove.css')}}">
 
-        <div class="demo">
-        <header class="demo__header"></header>
-        <div class="demo__content">
-            <div class="demo__card-cont">
+<div class="limiter">    
+    <div class="demo__content">
+        <div class="demo__card-cont">
             <div class="demo__card">
                 <div class="demo__card__top brown">
-                <div class="demo__card__img"></div>
-                <p class="demo__card__name">Hungry cat 6</p>
+                    <div class="demo__card__img"></div>
+                    <p class="demo__card__name">Hungry cat 6</p>
                 </div>
                 <div class="demo__card__btm">
-                <p class="demo__card__we">Whatever</p>
+                    <p class="demo__card__we">Whatever</p>
                 </div>
                 <div class="demo__card__choice m--reject"></div>
                 <div class="demo__card__choice m--like"></div>
@@ -22,11 +21,11 @@
             </div>
             <div class="demo__card">
                 <div class="demo__card__top lime">
-                <div class="demo__card__img"></div>
-                <p class="demo__card__name">Hungry cat 5</p>
+                    <div class="demo__card__img"></div>
+                    <p class="demo__card__name">Hungry cat 5</p>
                 </div>
                 <div class="demo__card__btm">
-                <p class="demo__card__we">Whatever</p>
+                    <p class="demo__card__we">Whatever</p>
                 </div>
                 <div class="demo__card__choice m--reject"></div>
                 <div class="demo__card__choice m--like"></div>
@@ -34,11 +33,11 @@
             </div>
             <div class="demo__card">
                 <div class="demo__card__top cyan">
-                <div class="demo__card__img"></div>
-                <p class="demo__card__name">Hungry cat 4</p>
+                    <div class="demo__card__img"></div>
+                    <p class="demo__card__name">Hungry cat 4</p>
                 </div>
                 <div class="demo__card__btm">
-                <p class="demo__card__we">Whatever</p>
+                    <p class="demo__card__we">Whatever</p>
                 </div>
                 <div class="demo__card__choice m--reject"></div>
                 <div class="demo__card__choice m--like"></div>
@@ -46,11 +45,11 @@
             </div>
             <div class="demo__card">
                 <div class="demo__card__top indigo">
-                <div class="demo__card__img"></div>
-                <p class="demo__card__name">Hungry cat 3</p>
+                    <div class="demo__card__img"></div>
+                    <p class="demo__card__name">Hungry cat 3</p>
                 </div>
                 <div class="demo__card__btm">
-                <p class="demo__card__we">Whatever</p>
+                    <p class="demo__card__we">Whatever</p>
                 </div>
                 <div class="demo__card__choice m--reject"></div>
                 <div class="demo__card__choice m--like"></div>
@@ -58,11 +57,11 @@
             </div>
             <div class="demo__card">
                 <div class="demo__card__top blue">
-                <div class="demo__card__img"></div>
-                <p class="demo__card__name">Hungry cat 2</p>
+                    <div class="demo__card__img"></div>
+                    <p class="demo__card__name">Hungry cat 2</p>
                 </div>
                 <div class="demo__card__btm">
-                <p class="demo__card__we">Whatever</p>
+                    <p class="demo__card__we">Whatever</p>
                 </div>
                 <div class="demo__card__choice m--reject"></div>
                 <div class="demo__card__choice m--like"></div>
@@ -70,19 +69,20 @@
             </div>
             <div class="demo__card">
                 <div class="demo__card__top purple">
-                <div class="demo__card__img"></div>
-                <p class="demo__card__name">Hungry cat</p>
+                    <div class="demo__card__img"></div>
+                    <p class="demo__card__name">Hungry cat</p>
                 </div>
                 <div class="demo__card__btm">
-                <p class="demo__card__we">Whatever</p>
+                    <p class="demo__card__we">Whatever</p>
                 </div>
                 <div class="demo__card__choice m--reject"></div>
                 <div class="demo__card__choice m--like"></div>
                 <div class="demo__card__drag"></div>
             </div>
-            </div>
-            <p class="demo__tip">Swipe left or right</p>
         </div>
-        </div>
-    <script src="{{asset('js/findlove.js')}}"></script>
+        <p class="demo__tip">Swipe left or right</p>
+    </div>
+</div>
+
+<script src="{{asset('js/findlove.js')}}"></script>
 @endsection
