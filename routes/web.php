@@ -13,7 +13,7 @@
 
 Route::get('/', 'PageController@login');
 Route::get('/register', 'PageController@register');
-Route::get('/informasi', 'PageController@informasi');
+Route::get('/informasi', 'KlinikController@index');
 
 Route::post('/login/submit', 'UserController@login');
 Route::post('/register', 'UserController@register');
