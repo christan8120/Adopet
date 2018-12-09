@@ -11,28 +11,32 @@
     <div class="main-container">
     
       <!-- Project One -->
+      @foreach($clinics as $clinic)
       <div class="row">
         <div class="">
-          <a href="{{asset('image/klinik/1.jpg')}}" target="_blank">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="{{asset('image/klinik/1.jpg')}}" width="400" height="400" alt="">
-          </a>
+            <a href="{{asset($clinic->picture_src)}}" target="_blank">
+              <img class="img-fluid rounded mb-3 mb-md-0" src="{{asset($clinic->picture_src)}}" width="400" height="300" alt="">
+            </a>
         </div>
+
         <div class="">
-          <h1>Klinik Hewan Puri Kembangan</h1>
-          <p>Klinik Hewan Puri Kembangan adalah Klinik Hewan Clinic di Kembangan, Jakarta. Itu klinik dikunjungi oleh kedokteran dokter seperti Drh. I. D. Made Suwardana dan Drh. Ida Aryani. <br>
-          Jadwal dari Klinik Hewan Puri Kembangan adalah: Sen-Sab: 10:00-19:00. Beberapa layanan yang ditangani oleh Clinic adalah: Pemindaian Hewan Peliharaan,Pemeriksaan Kesehatan,Acupuncture,Skin Service dan Cek Kesehatan etc. 
-          <br> <br>
-          Jl. Puri Kembangan Raya No.77 H, Kedoya RT.11/05, Landmark: sebelah Sekolah Budi Murni, Jakarta</p>
-          <a class="btn btn-primary" href="{{asset('image/klinik/1.jpg')}}" target="_blank">View FOTO</a>
+          <h1>{{$clinic->klinik_name}}</h1> 
+          <p>{{$clinic->description}}
+          <br> <br> {{$clinic->address}}
+          </p>          
+          <a class="btn btn-primary" href="{{asset($clinic->picture_src)}}" target="_blank">View FOTO</a>
         </div>
       </div>
+      <hr>
+      @endforeach
+
+
       <!-- /.row -->
 
-
-      <hr>
+      
 
       <!-- Project Two -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="">
           <a href="{{asset('image/klinik/2.jpg')}}" target="_blank">
             <img class="img-fluid rounded mb-3 mb-md-0" src="{{asset('image/klinik/2.jpg')}}" width="400" height="300" alt="">
@@ -45,13 +49,13 @@
           </p>
           <a class="btn btn-primary" href="{{asset('image/klinik/2.jpg')}}" target="_blank">View FOTO</a>
         </div>
-      </div>
+      </div> -->
       <!-- /.row -->
 
-      <hr>
+      <!-- <hr> -->
 
       <!-- Project Three -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="">
           <a href="{{asset('image/klinik/3.jpg')}}" target="_blank">
             <img class="img-fluid rounded mb-3 mb-md-0" src="{{asset('image/klinik/3.jpg')}}" width="400" height="350" alt="">
@@ -65,13 +69,13 @@
             <p>Jl. Arteri Kelapa Dua No. 2A, Landmark: di samping Bank Woori Saudara, Jakarta</p>
           <a class="btn btn-primary" href="{{asset('image/klinik/3.jpg')}}" target="_blank">View FOTO</a>
         </div>
-      </div>
+      </div> -->
       <!-- /.row -->
 
-      <hr>
+      <!-- <hr> -->
 
       <!-- Project Four -->
-      <div class="row">
+      <!-- <div class="row">
 
         <div class="">
           <a href="{{asset('image/klinik/4.jpg')}}" target="_blank">
@@ -84,10 +88,10 @@
             <p>Jl. K.H. Mas Mansyur No.8A, RT.10/RW.6, Karet Tengsin, Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10250</p>
           <a class="btn btn-primary" href="{{asset('image/klinik/4.jpg')}}" target="_blank">View FOTO</a>
         </div>
-      </div>
+      </div> -->
       <!-- /.row -->
 
-      <hr>
+      <!-- <hr> -->
 
 
     </div>
