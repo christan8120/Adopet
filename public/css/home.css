@@ -41,7 +41,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* ------ */
 .img-fluid{
+    margin-bottom:10px;
     height:300px;
+    width: 500px;
 }
 
 .img-fluid-modal{
@@ -71,10 +73,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 @media(max-width: 576px){    
 
-    .img-fluid-modal{
-        width:170px;
-        height:170px;
-        margin:1%;
+    .img-fluid{
+        margin-bottom:10px;
+        height:200px;
+        width: 200px;
+    }
+
+.img-fluid-modal{
+       width:170px;
+       height:170px;
+       margin:1%;
     }
 }
 .confirm-adopt-button{

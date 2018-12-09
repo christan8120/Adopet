@@ -28,4 +28,10 @@ class PageController extends Controller
     {
         return view('findlove');
     }
+
+    public function profile()
+    {
+        return view('profile');
+    }
+
 }

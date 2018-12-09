@@ -1,0 +1,70 @@
+.card{
+    width:360px;
+}
+
+.menuP{
+    background-color: #ffccff;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.menuP>a{
+    font-size:14px;
+    color: black;
+}
+
+.menuP:hover{
+    background-color: #ff99ff;
+}
+
+.buttonS {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding:10px;
+    color: black;
+    background-color: #ffccff;
+    border-color: #ff99ff;
+}
+
+.formS{
+    padding: 7px;
+}
+
+@media (max-width: 576px) {
+    
+    .card{
+        width: auto;
+    }
+
+    .menuP{
+        background-color: #ffccff;
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .menuP>a{
+        font-size:15px;
+        color: black;
+    }
+
+    .menuP:hover{
+        background-color: #ff99ff;
+    }
+
+    .buttonS {
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        padding: 10px;
+        color: black;
+        background-color: #ffccff;
+        border-color: #ff99ff;
+    }
+
+}

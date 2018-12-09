@@ -31,12 +31,12 @@
     overflow: hidden;
     position: relative;
     height: 47rem;
-    /* padding-top: 4.5rem; */
+    padding-top: 4.5rem;
     user-select: none;
   }
   .demo__card-cont {
     position: relative;
-    /* width: 22rem; */
+    width: 24rem;
     height: 32rem;
     margin: 0 auto 5rem;
   }
@@ -98,7 +98,7 @@
     margin: 0 auto 1.5rem;
     border-radius: 50%;
     border: 0.5rem solid #fff;
-    /* background-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg'); */
+    background-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg');
     background-size: cover;
   }
   .demo__card__name {
@@ -194,12 +194,12 @@
         overflow: hidden;
         position: relative;
         height: 47rem;
-        /* padding-top: 4.5rem; */
+        padding-top: 4.5rem;
         user-select: none;
       }
       .demo__card-cont {
         position: relative;
-        /* width: 24rem; */
+        width: 24rem;
         height: 32rem;
         margin: 0 auto 5rem;
       }
@@ -261,7 +261,7 @@
         margin: 0 auto 1.5rem;
         border-radius: 50%;
         border: 0.5rem solid #fff;
-        /*background-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg');*/
+        background-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg');
         background-size: cover;
       }
       .demo__card__name {
@@ -273,9 +273,9 @@
       .demo__card__btm {
         height: 11.5rem;
         background: #fff;
-        text-align: center;
       }
-      .demo__card__we {        
+      .demo__card__we {
+        text-align: center;
         font-size: 2.2rem;
         line-height: 11.5rem;
       }
@@ -333,20 +333,13 @@
       .demo__tip {
         text-align: center;
         font-size: 2.2rem;
-      }       
+      }  
 }
-@media(min-width: 1000px){ 
-.demo__card-cont {
-  position: relative;
-  width: 24rem;
-  height: 32rem;
-  margin: 0 auto 5rem;
-}      
-} 
 
-/* .footer{
+.footer{
   width:100%;
   float:left;
   position: absolute;
-} */
+margin-top: 940px;
+}
   
