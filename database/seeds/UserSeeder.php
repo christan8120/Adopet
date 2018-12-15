@@ -13,12 +13,11 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
         DB::table('users')->insert([
             'name' => 'admin',
             'password' => Hash::make('admin'),
             'email' => 'admin@admin.com',
-            'address' => $faker->address,
+            'address' => 'Indonesia',
             'gender' => 'Male',
 //            'email_verified_at' => Carbon::now()
         ]);
