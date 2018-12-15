@@ -25,4 +25,4 @@ Route::get('/findlove', 'PageController@findlove');
 
 Route::get('/signout','UserController@signout');
 
-Route::get('/profile', 'PageController@profile');
+Route::get('/profile', 'UserController@profile');

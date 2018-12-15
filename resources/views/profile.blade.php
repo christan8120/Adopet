@@ -32,21 +32,21 @@
                                     <div class="form-group row">
                                         <label for="email" class="col-4 col-form-label">Email*</label> 
                                         <div class="formS col-8">
-                                        Abcde@gmail.com
+                                        {{$user->email}}
                                         <!-- <input id="email" name="email" placeholder="Abcde@gmail.com" class="form-control here" required="required" type="text"> -->
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="name" class="col-4 col-form-label">Full Name</label> 
                                         <div class="formS col-8">
-                                        Abcde
+                                        {{$user->name}}
                                         <!-- <input id="name" name="name" placeholder="Abcde" class="form-control here" type="text"> -->
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="text" class="col-4 col-form-label">Gender</label> 
                                         <div class="formS col-8">
-                                        Male
+                                        {{$user->gender}}
                                         <!-- <input id="radio" name="gender" placeholder="Male" class="form-control here" required="required" type="text"> -->
                                         </div>
                                     </div>
@@ -62,14 +62,14 @@
                                     <div class="form-group row">
                                         <label for="address" class="col-4 col-form-label">Address</label> 
                                         <div class="formS col-8">
-                                        Jl. dimana-mana hatiku senang
+                                        {{$user->address}}
                                         <!-- <input id="website" name="website" placeholder="website" class="form-control here" type="text"> -->
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="phoneNumber" class="col-4 col-form-label">Phone Number</label> 
                                         <div class="formS col-8">
-                                        0857788441122
+                                        
                                         <!-- <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea> -->
                                         </div>
                                     </div>

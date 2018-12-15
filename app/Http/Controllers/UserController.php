@@ -55,7 +55,10 @@ class UserController extends Controller
 //        return view('login', compact('input')) ->with('alert', 'Updated!');
         return redirect()->back() ->with('alert', $input);
     }
-    
+    public function profile(){
+        $user = User::where('id',Auth::user()->id)->first();
+        return view('profile',compact('user'));
+    }
     public function signout(){                      
         Auth::logout();        
         return redirect('/');

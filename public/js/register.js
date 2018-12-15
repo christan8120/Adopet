@@ -16,6 +16,10 @@ function Submit(){
         swal("","Your password hasn't been filled", "error");
         return false;
     }
+    else if(txtPassword.val().length < 8){
+        swal("","Your password needs to be at least 8 chars!", "error");
+        return false;
+    }
     else if(txtPassword.val()!==txtPassword2.val()){
         swal("","Your passwords don't match", "error");
         return false;
