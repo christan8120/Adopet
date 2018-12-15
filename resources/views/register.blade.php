@@ -28,10 +28,11 @@
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
+                    <li style="color:red">{{ $error }}</li>
                 @endforeach
             </ul>
         </div>
+        <br>
     @endif
                                               
     <div class="content">				
@@ -40,7 +41,7 @@
                 @csrf
                 <input id="txtName" type="text" name="name" placeholder="Full name"><br>
                 <input id="txtPassword" type="password" name="password" placeholder="password"><br>
-                <input id="txtPassword2" type="password" name="password2" placeholder="repeat password"><br>
+                <input id="txtPassword2" type="password" name="password_confirmation" placeholder="repeat password"><br>
                 <input id="txtEmail" type="email" name="email" placeholder="email">
 
                 <textarea id="txtAddress" name="address" placeholder="address"></textarea>
