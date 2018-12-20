@@ -81,7 +81,7 @@ class UserController extends Controller
         $user = Socialite::driver($provider)->stateless()->user();
         $authUser = $this->findOrCreateUser($user, $provider);
         Auth::login($authUser, true);
-        return redirect('/');
+        return redirect('/index');
     }
     /**
      * If a user has registered before using social auth, return the user
@@ -102,8 +102,6 @@ class UserController extends Controller
                 'email'    => !empty($user->email)? $user->email : '' ,
                 'provider' => $provider,
                 'provider_id' => $user->id,
-                'address' => 'Street',
-                'gender' => 'Male'
             ]);
             return $data;
         }
