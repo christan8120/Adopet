@@ -89,10 +89,15 @@ class UserController extends Controller
             return $authUser;
         }
         else{
-            $data = User::create([
-                'name'     => $user->name,
-                'email'    => !empty($user->email)? $user->email : '' 
-            ]);
+            $data = new User;
+            $data->name = $user->name;
+            $data->email = $user->email;
+            $data->provider = $provider;
+            $data->provider_id = $user->id;
+            $data->gender = !empty($user->gender)? $user->gender : "Male";
+            $data->address = !empty($user->address)? $user->address : "Unknown Street";
+            $data->created_at = Carbon::now();
+            $data->save();
             return $data;
         }
     }
