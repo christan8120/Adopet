@@ -26,3 +26,5 @@ Route::get('/findlove', 'PageController@findlove');
 Route::get('/signout','UserController@signout');
 
 Route::get('/profile', 'UserController@profile');
+Route::get('/loginProvider/{provider}', 'UserController@redirectToProvider');
+Route::get('/loginProvider/{provider}/callback', 'UserController@handleProviderCallback');
