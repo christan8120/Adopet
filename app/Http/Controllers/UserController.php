@@ -20,16 +20,10 @@ class UserController extends Controller
             'email' => $req->input('username'),
             'password' => $req->input('pass')
         ];        
-        if(!Auth::attempt($data)){            
-            //dd(!Auth::attempt($data));
-            return redirect()->back()->with('error', "Login Failed");
-        }
-        else{            
-            // return redirect()->back()->with('error', "Login Failed");
-            return redirect('/index');
-        }
-        //dd($data);
-        //return redirect()->back()->with('error', "Login Failed");
+        if(!Auth::attempt($data)){       
+            return redirect()->back()->with('alert', "Wrong email/password");
+        }           
+        return redirect('/index');        
     }
 
     public function register(Request $request)
@@ -52,8 +46,6 @@ class UserController extends Controller
         $user->save();
 
         $input = $request->input('email');
-//        return view('login', compact('input'));
-//        return view('login', compact('input')) ->with('alert', 'Updated!');
         return redirect()->back() ->with('alert', $input);
     }
     public function profile(){

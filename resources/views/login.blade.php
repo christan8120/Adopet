@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('fonts/iconic/css/material-design-iconic-font.min.css')}}">		    
 
-	<script>
+	{{-- <script>
 	var exist = '{{Session::has('error')}}';
 		if(exist){			
 			swal({
@@ -14,7 +14,18 @@
 				icon: "error"
 			});
 		}
-	</script>
+	</script> --}}
+	<script>
+        var msg = '{{Session::get('alert')}}';
+        var exist = '{{Session::has('alert')}}';
+        if(exist){
+            swal({
+                title: "Oops!",
+                text: msg,
+                icon: "warning"
+            });
+        }
+    </script>
 	<form class="login100-form validate-form" method="post" action="/login/submit">
 	{{csrf_field()}}				
 		<div class="wrap-input100 validate-input m-b-23" data-validate = "Email is required">

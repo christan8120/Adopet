@@ -18,8 +18,8 @@ Route::get('/register', 'PageController@register')->middleware(Middleware\guestC
 Route::post('/login/submit', 'UserController@login')->middleware(Middleware\guestCheck::class);
 Route::post('/register', 'UserController@register')->middleware(Middleware\guestCheck::class);
 
-Route::get('/loginProvider/{provider}', 'UserController@redirectToProvider')
-Route::get('/loginProvider/{provider}/callback', 'UserController@handleProviderCallback')
+Route::get('/loginProvider/{provider}', 'UserController@redirectToProvider');
+Route::get('/loginProvider/{provider}/callback', 'UserController@handleProviderCallback');
 
 Route::get('/index', 'PetController@index')->middleware(Middleware\SessionCheck::class);
 Route::get('/adoptIt/{id}', 'PetController@adoptIt')->middleware(Middleware\SessionCheck::class);
