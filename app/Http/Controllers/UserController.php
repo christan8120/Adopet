@@ -70,7 +70,7 @@ class UserController extends Controller
      */
     public function handleProviderCallback($provider)
     {
-        $user = Socialite::driver($provider)->stateless()->user();
+        $user = Socialite::driver($provider)->user();
         $authUser = $this->findOrCreateUser($user, $provider);
         Auth::login($authUser, true);
         return redirect('/index');
@@ -84,16 +84,14 @@ class UserController extends Controller
      */
     public function findOrCreateUser($user, $provider)
     {
-        $authUser = User::where('provider_id', $user->id)->first();
+        $authUser = User::where('email', $user->email)->first();
         if ($authUser) {
             return $authUser;
         }
         else{
             $data = User::create([
                 'name'     => $user->name,
-                'email'    => !empty($user->email)? $user->email : '' ,
-                'provider' => $provider,
-                'provider_id' => $user->id,
+                'email'    => !empty($user->email)? $user->email : '' 
             ]);
             return $data;
         }
