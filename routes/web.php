@@ -24,7 +24,10 @@ Route::get('/loginProvider/{provider}/callback', 'UserController@handleProviderC
 Route::get('/index', 'PetController@index')->middleware(Middleware\SessionCheck::class);
 Route::get('/adoptIt/{id}', 'PetController@adoptIt')->middleware(Middleware\SessionCheck::class);
 Route::get('/informasi', 'KlinikController@index')->middleware(Middleware\SessionCheck::class);
-Route::get('/findlove', 'PageController@findlove')->middleware(Middleware\SessionCheck::class);
+Route::get('/findlove', 'PetController@findlove')->middleware(Middleware\SessionCheck::class);
 Route::get('/profile', 'UserController@profile')->middleware(Middleware\SessionCheck::class);
 
+Route::post('/savePet', 'PetController@savePet')->middleware(Middleware\SessionCheck::class);
+Route::post('/saveList', 'PetController@saveFindLove')->middleware(Middleware\SessionCheck::class);
+Route::get('acceptMate/{id}', 'PetController@acceptMate')->middleware(Middleware\SessionCheck::class);
 Route::get('/signout','UserController@signout');

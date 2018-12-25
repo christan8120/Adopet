@@ -10,4 +10,7 @@ class Pet extends Model
     public function category(){
         return $this->belongsTo(Category::class, 'category_id');
     }
+    public function tradoption(){
+        return $this->hasMany(TrAdoption::class);
+    }
 }

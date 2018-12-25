@@ -80,7 +80,7 @@
 			</a>
 		</div>
 	</form>
-	<script src="{{asset("js/login/main.js")}}"></script>
+	<script src="{{asset('js/login/main.js')}}"></script>
 @endsection
 
 	<!-- <script src="vendor/animsition/js/animsition.min.js"></script>

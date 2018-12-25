@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Model\Pet;
+use App\Model\TrAdoption;
 use App\User;
+use App\Model\PetsLove;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
@@ -50,7 +52,15 @@ class UserController extends Controller
     }
     public function profile(){
         $user = User::where('id',Auth::user()->id)->first();
-        return view('profile',compact('user'));
+        $adoptedPets = TrAdoption::where('userAdopter', Auth::user()->id)->get();    
+        $loveMates = PetsLove::where('userOwner_id', Auth::user()->id)->get();        
+        $data = [
+            'user' => $user,
+            'adoptedPets' => $adoptedPets,
+            'loveMates' => $loveMates            
+        ];
+        //return view('profile',compact('user'));
+        return view('profile', $data);
     }
     public function signout(){                      
         Auth::logout();        

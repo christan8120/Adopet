@@ -21,6 +21,7 @@ class CreatePetsTable extends Migration
             $table->integer('age');
             $table->string('gender');
             $table->integer('status');
+            $table->integer('post_status'); //0:not for adopt or find love, 1: available to be adopted, 2: finding love
             $table->string('picture_src');
             $table->string('description');
             $table->string('audit_activity');

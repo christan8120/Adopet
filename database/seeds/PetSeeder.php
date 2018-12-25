@@ -177,10 +177,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Caety',
-            'userOwner' => 10,
+            'userOwner' => 2,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
+            'post_status' => 2,
             'picture_src' => "image/pet/cat/1.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
@@ -189,10 +190,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Cefde',
-            'userOwner' => 10,
+            'userOwner' => 2,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
+            'post_status' => 2,
             'picture_src' => "image/pet/cat/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
@@ -201,10 +203,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Cearet',
-            'userOwner' => 10,
+            'userOwner' => 2,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
+            'post_status' => 2,
             'picture_src' => "image/pet/cat/1.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
@@ -213,10 +216,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Cadad',
-            'userOwner' => 10,
+            'userOwner' => 2,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
+            'post_status' => 2,
             'picture_src' => "image/pet/cat/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
@@ -225,10 +229,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Ceerte',
-            'userOwner' => 10,
+            'userOwner' => 2,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
+            'post_status' => 2,
             'picture_src' => "image/pet/cat/1.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
@@ -237,10 +242,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Caadfe',
-            'userOwner' => 10,
+            'userOwner' => 2,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
+            'post_status' => 2,
             'picture_src' => "image/pet/cat/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
@@ -249,10 +255,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Ceaea',
-            'userOwner' => 10,
+            'userOwner' => 2,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
+            'post_status' => 2,
             'picture_src' => "image/pet/cat/1.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
@@ -261,10 +268,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Caeter',
-            'userOwner' => 10,
+            'userOwner' => 2,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
+            'post_status' => 2,
             'picture_src' => "image/pet/cat/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',

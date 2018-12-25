@@ -102,44 +102,46 @@
 		                    <div class="card-body">
 		                        <div class="row">
 		                            <div class="col-md-12">
-		                                <h4>Your Adoption</h4>
-		                                <hr>
+		                                <h4>Your Adoption</h4>		                                
 		                            </div>
 		                        </div>
+                                @foreach($adoptedPets as $ap)
+                                <hr>
 		                        <div class="row">
 		                            <div class="col-md-12">
 		                                <form>
 		                                <div class="form-group row">
 		                                    <label for="namePet" class="col-4 col-form-label">Pet Name</label> 
 		                                    <div class="formS col-8">
-		                                    Doggy
+		                                    {{$ap->fkPet->pet_name}}
 		                                    <!-- <input id="email" name="email" placeholder="Abcde@gmail.com" class="form-control here" required="required" type="text"> -->
 		                                    </div>
 		                                </div>
 		                                <div class="form-group row">
 		                                    <label for="Age" class="col-4 col-form-label">Age</label> 
 		                                    <div class="formS col-8">
-		                                    5
+		                                    {{$ap->fkPet->age}}
 		                                    <!-- <input id="name" name="name" placeholder="Abcde" class="form-control here" type="text"> -->
 		                                    </div>
 		                                </div>
 		                                <div class="form-group row">
 		                                    <label for="gender" class="col-4 col-form-label">Gender</label> 
 		                                    <div class="formS col-8">
-		                                    Male
+		                                    {{$ap->fkPet->gender}}
 		                                    <!-- <input id="radio" name="gender" placeholder="Male" class="form-control here" required="required" type="text"> -->
 		                                    </div>
 		                                </div>
 		                                <div class="form-group row">
 		                                    <label for="Deskripsi" class="col-4 col-form-label">Deskripsi</label> 
 		                                    <div class="formS col-8">
-		                                    blam-blam-blam-blam-blam
+		                                    {{$ap->fkPet->description}}
 		                                    <!-- <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea> -->
 		                                    </div>
 		                                </div>
 		                            	</form>
 		                        	</div>
 		                    	</div>
+                                @endforeach
 		                	</div>
 		            	</div>
 		        	</div>
@@ -153,64 +155,66 @@
 		                    <div class="card-body">
 		                        <div class="row">
 		                            <div class="col-md-12">
-		                                <h4>Your Mate</h4>
-		                                <hr>
+		                                <h4>Your Mate</h4>		                                
 		                            </div>
 		                        </div>
+                                <hr>
+                                @foreach($loveMates as $lm)
 		                        <div class="row">
 		                            <div class="col-md-12">
 		                                <form>
                                         <div class="form-group row">
 		                                    <label for="ownerName" class="col-4 col-form-label">Owner Name</label> 
 		                                    <div class="formS col-8">
-		                                    Fghijk
+		                                    {{$lm->fkUserLove->name}}
 		                                    <!-- <input id="email" name="email" placeholder="Abcde@gmail.com" class="form-control here" required="required" type="text"> -->
 		                                    </div>
                                         </div>
                                         <div class="form-group row">
 		                                    <label for="Email" class="col-4 col-form-label">Email</label> 
 		                                    <div class="formS col-8">
-		                                    Fghijk@gmail.com
+		                                    {{$lm->fkUserLove->email}}
 		                                    <!-- <input id="email" name="email" placeholder="Abcde@gmail.com" class="form-control here" required="required" type="text"> -->
 		                                    </div>
 		                                </div>
 		                                <div class="form-group row">
 		                                    <label for="namePet" class="col-4 col-form-label">Pet Name</label> 
 		                                    <div class="formS col-8">
-		                                    Doggy
+		                                    {{$lm->fkPetLove->pet_name}}
 		                                    <!-- <input id="email" name="email" placeholder="Abcde@gmail.com" class="form-control here" required="required" type="text"> -->
 		                                    </div>
 		                                </div>
 		                                <div class="form-group row">
 		                                    <label for="Age" class="col-4 col-form-label">Age</label> 
 		                                    <div class="formS col-8">
-		                                    5
+		                                    {{$lm->fkPetLove->pet_age}}
 		                                    <!-- <input id="name" name="name" placeholder="Abcde" class="form-control here" type="text"> -->
 		                                    </div>
 		                                </div>
 		                                <div class="form-group row">
 		                                    <label for="gender" class="col-4 col-form-label">Gender</label> 
 		                                    <div class="formS col-8">
-		                                    Male
+		                                    {{$lm->fkPetLove->gender}}
 		                                    <!-- <input id="radio" name="gender" placeholder="Male" class="form-control here" required="required" type="text"> -->
 		                                    </div>
 		                                </div>
 		                                <div class="form-group row">
 		                                    <label for="Deskripsi" class="col-4 col-form-label">Description</label> 
 		                                    <div class="formS col-8">
-		                                    blam-blam-blam-blam-blam
+		                                    {{$lm->fkPetLove->description}}
 		                                    <!-- <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea> -->
 		                                    </div>
                                         </div>
                                         <!-- disini harusnya bukan submit, tapi tombol untuk oke untuk menerima tapi gw bingung bikinnya harus 1-1  :) tolong dong -->
                                         <div class="form-group row">
                                             <div class="offset-4 col-8">
-                                            <button class="buttonS" name="submit" type="submit">Accept Mate!</button>
+                                            <a href="/acceptMate/{{$lm->id}}" class="buttonS">Accept Mate!</a>
                                             </div>
                                         </div>
 		                            	</form>
 		                        	</div>
 		                    	</div>
+                                @endforeach
 		                	</div>
 		            	</div>
 		        	</div>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTradoptionsTable extends Migration
+class CreatePetslovesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateTradoptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tradoptions', function (Blueprint $table) {
+        Schema::create('petsloves', function (Blueprint $table) {
             $table->increments('id');
-            $table->Integer('userOwner');
-            $table->Integer('userAdopter');
-            $table->date('transaction_date');
-            $table->Integer('pet_id');
-            $table->string('audit_activity');
+            $table->Integer('petOwner_id');
+            $table->Integer('userOwner_id');
+            $table->Integer('petLove_id');
+            $table->Integer('userLove_id');
+            $table->Integer('status');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateTradoptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tradoptions');
+        Schema::dropIfExists('petsloves');
     }
 }

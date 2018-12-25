@@ -20,12 +20,24 @@ $(document).ready(function() {
       $cardLike.css("opacity", likeOpacity);
     };
   
-    function release() {
-  
+    function release(id) {      
       if (pullDeltaX >= decisionVal) {
-        $card.addClass("to-right");
+        $card.addClass("to-right");   
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+        $.ajax({
+          type:"POST",
+          url:"/saveList",
+          data:{'id':id},
+          success:function(msg){
+            console.log(msg);
+          }
+        });                    
       } else if (pullDeltaX <= -decisionVal) {
-        $card.addClass("to-left");
+        $card.addClass("to-left");        
       }
   
       if (Math.abs(pullDeltaX) >= decisionVal) {
@@ -55,6 +67,7 @@ $(document).ready(function() {
     };
   
     $(document).on("mousedown touchstart", ".demo__card:not(.inactive)", function(e) {
+      var id = this.id;      
       if (animating) return;
   
       $card = $(this);
@@ -66,14 +79,13 @@ $(document).ready(function() {
         var x = e.pageX || e.originalEvent.touches[0].pageX;
         pullDeltaX = (x - startX);
         if (!pullDeltaX) return;
-        pullChange();
+        pullChange();        
       });
   
       $(document).on("mouseup touchend", function() {
         $(document).off("mousemove touchmove mouseup touchend");
         if (!pullDeltaX) return; // prevents from rapid click events
-        release();
+        release(id);             
       });
     });
-  
   });
