@@ -24,8 +24,13 @@
                         </div>
 
                         <div class="">
-                            <h3 class="">{{$pet->category->category_name}} Description</h3>
-                            <p>{{$pet->description}}</p>                            
+                            <div style="text-align: center;margin-bottom:0.5rem;">
+                                <p><b>Name: </b> {{$pet->pet_name}}</p> 
+                                <p><b>Age: </b>{{$pet->age}}</p> 
+                                <p><b>Gender: </b>{{$pet->gender}}</p> 
+                                <p><b>Category: </b>{{$pet->category->category_name}}</p>
+                            </div>
+                            <p><b>Description: </b>{{$pet->description}}</p>                            
                         </div>
                         <button  type="button" class="btn btn-primary confirm-adopt-button" onclick="confirmationPanel();">Adopt</button>
                         <div class="text-center">

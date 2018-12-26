@@ -12,6 +12,10 @@ function Submit(){
         swal("","Your name needs to be at least 5 chars!", "error");
         return false;
     }
+    else if(txtEmail.val()===""){
+        swal("","Your email hasn't been filled", "error");
+        return false;
+    }
     else if(txtPassword.val()===""){
         swal("","Your password hasn't been filled", "error");
         return false;
@@ -22,10 +26,6 @@ function Submit(){
     }
     else if(txtPassword.val()!==txtPassword2.val()){
         swal("","Your passwords don't match", "error");
-        return false;
-    }
-    else if(txtEmail.val()===""){
-        swal("","Your email hasn't been filled", "error");
         return false;
     }
     else if(txtAddress.val()===""){

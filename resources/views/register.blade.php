@@ -1,5 +1,5 @@
 @extends('template.login-layout')
-@section('title','Registrasi')
+@section('title','Register')
 
 @section('back')
     <a href="/"><p id="Back">Back to Login</p></a>	
@@ -40,9 +40,9 @@
             <form action="/register" method="post" onsubmit="return Submit()" class="login100-form validate-form">
                 @csrf
                 <input id="txtName" type="text" name="name" placeholder="Full name"><br>
-                <input id="txtPassword" type="password" name="password" placeholder="password"><br>
-                <input id="txtPassword2" type="password" name="password_confirmation" placeholder="repeat password"><br>
                 <input id="txtEmail" type="email" name="email" placeholder="email">
+                <input id="txtPassword" type="password" name="password" placeholder="password"><br>
+                <input id="txtPassword2" type="password" name="password_confirmation" placeholder="repeat password"><br>                
 
                 <textarea id="txtAddress" name="address" placeholder="address"></textarea>
 

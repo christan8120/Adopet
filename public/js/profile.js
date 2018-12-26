@@ -1,31 +1,31 @@
-var x = document.getElementById("profile");
-var y = document.getElementById("adoption");
-var z = document.getElementById("loveMate"); 
+var profile = document.getElementById("profile");
+var adoption = document.getElementById("adoption");
+var loveMate = document.getElementById("loveMate"); 
 
-y.style.display = "none";
-z.style.display = "none";
+adoption.style.display = "none";
+loveMate.style.display = "none";
 
-function myFunction() {
-    if (x.style.display === "none") {
-        x.style.display = "block";
-        y.style.display = "none";
-        z.style.display = "none";
+function showProfile() {
+    if (profile.style.display === "none") {
+        profile.style.display = "block";
+        adoption.style.display = "none";
+        loveMate.style.display = "none";
     }
 }
 
-function myFunction1(){
-    if(y.style.display === "none") {
-        y.style.display = "block";
-        x.style.display = "none";
-        z.style.display = "none";
+function showAdoptions(){
+    if(adoption.style.display === "none") {
+        adoption.style.display = "block";
+        profile.style.display = "none";
+        loveMate.style.display = "none";
     }
 }
 
-function myFunction2(){
-    if(z.style.display === "none") {
-        z.style.display = "block";
-        x.style.display = "none";
-        y.style.display = "none";
+function showLoveMate(){
+    if(loveMate.style.display === "none") {
+        loveMate.style.display = "block";
+        profile.style.display = "none";
+        adoption.style.display = "none";
     }
 }
 

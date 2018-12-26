@@ -1,5 +1,5 @@
 @extends('template.main-layout')
-@section('title','Adopet')
+@section('title','Profile')
 
 @section('content')
 
@@ -12,9 +12,9 @@
 
     <div class="container">
         <div class="row justify-content-center">
-                <button onclick="myFunction()"class="menuP col-4"><a href="#profile">Your Profile</a></button>
-                <button onclick="myFunction1()"class="menuP col-4"><a href="#adoption">Adoption</a></button>
-                <button onclick="myFunction2()"class="menuP col-4"><a href="#loveMate">Love-Mate</a></button>
+                <button onclick="showProfile()"class="menuP col-4"><a href="#profile">Your Profile</a></button>
+                <button onclick="showAdoptions()"class="menuP col-4"><a href="#adoption">Adoption</a></button>
+                <button onclick="showLoveMate()"class="menuP col-4"><a href="#loveMate">Love-Mate</a></button>
         </div>
             <div class="row">   
                 <div class="col-md-9">

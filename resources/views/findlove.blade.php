@@ -1,5 +1,5 @@
 @extends('template.main-layout')
-@section('title','Adopet')
+@section('title','Find Love')
 
 @section('content')
 <meta name="csrf-token" content="{{ csrf_token() }}">

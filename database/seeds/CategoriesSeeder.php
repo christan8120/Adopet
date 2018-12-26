@@ -12,14 +12,13 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        //
         DB::table('categories')->insert([
-            'category_name' => 'Dog',
+            'id' => 1,
+            'category_name' => 'Cat',
             'audit_activity' => 'I',
         ]);
-
         DB::table('categories')->insert([
-            'category_name' => 'Cat',
+            'category_name' => 'Dog',
             'audit_activity' => 'I',
         ]);
 
