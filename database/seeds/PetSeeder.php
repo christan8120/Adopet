@@ -177,11 +177,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Caety',
-            'userOwner' => 2,
+            'userOwner' => 1,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
-            'post_status' => 2,
+            'post_status' => 1,
             'picture_src' => "image/pet/cat/1.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
@@ -190,11 +190,11 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Cefde',
-            'userOwner' => 2,
+            'userOwner' => 1,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
-            'post_status' => 2,
+            'post_status' => 1,
             'picture_src' => "image/pet/cat/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
@@ -203,12 +203,12 @@ class PetSeeder extends Seeder
         DB::table('pets')->insert([
             'category_id' => 1,
             'pet_name' => 'Cearet',
-            'userOwner' => 2,
+            'userOwner' => 1,
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
             'post_status' => 2,
-            'picture_src' => "image/pet/cat/1.jpg",
+            'picture_src' => "image/pet/dog/1.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
         ]);
@@ -221,7 +221,7 @@ class PetSeeder extends Seeder
             'gender' => 'Male',
             'status' => 0,
             'post_status' => 2,
-            'picture_src' => "image/pet/cat/2.jpg",
+            'picture_src' => "image/pet/dog/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
         ]);
@@ -234,7 +234,7 @@ class PetSeeder extends Seeder
             'gender' => 'Male',
             'status' => 0,
             'post_status' => 2,
-            'picture_src' => "image/pet/cat/1.jpg",
+            'picture_src' => "image/pet/hamster/1.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
         ]);
@@ -247,7 +247,7 @@ class PetSeeder extends Seeder
             'gender' => 'Male',
             'status' => 0,
             'post_status' => 2,
-            'picture_src' => "image/pet/cat/2.jpg",
+            'picture_src' => "image/pet/hamster/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
         ]);
@@ -259,8 +259,8 @@ class PetSeeder extends Seeder
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
-            'post_status' => 2,
-            'picture_src' => "image/pet/cat/1.jpg",
+            'post_status' => 1,
+            'picture_src' => "image/pet/rabbit/1.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
         ]);
@@ -272,13 +272,10 @@ class PetSeeder extends Seeder
             'age' => 5, //in month
             'gender' => 'Male',
             'status' => 0,
-            'post_status' => 2,
-            'picture_src' => "image/pet/cat/2.jpg",
+            'post_status' => 1,
+            'picture_src' => "image/pet/rabbit/2.jpg",
             'description' => "blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam blam",
             'audit_activity' => 'I',
-        ]);
-
-
-        
+        ]);        
     }
 }

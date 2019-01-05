@@ -15,7 +15,12 @@ class PetController extends Controller
 {
     //
     public function index(){
-        $pets = Pet::where('status', 0)->get();
+        $condition = [
+            ["post_status", "=", "1"],
+            ["userOwner" , "!=", Auth::user()->id]
+        ];
+        //$pets = Pet::where('post_status', 1)->get();
+        $pets = Pet::where($condition)->get();
         return view('home', ['pets'=>$pets]);
     }
 
@@ -69,12 +74,12 @@ class PetController extends Controller
         return redirect('/findlove');
     }
 
-    public function saveFindLove()
+    public function saveFindLove(Request $req)
     {               
         $petOwner = Pet::where('id', request('id'))->first();
-        $userOwner = User::where('id', $petOwner->userOwner);
-        $petLove = Pet::where('userOwner', Auth::user()->id)->first();   
-             
+        $userOwner = User::where('id', $petOwner->userOwner)->first();
+        $petLove = Pet::where('id', request('petid'))->first();   
+        
         $data = [
             'petOwner_id'=>$petOwner->id,
             'userOwner_id'=>$petOwner->userOwner,
@@ -97,25 +102,40 @@ class PetController extends Controller
         }
     }
 
-    public function acceptMate($id)
+    public function acceptMate($id, $petid)
     {
-        $petsLove = PetsLove::where('id', $id)->first();
+        $condition = [
+            ["userOwner_id", '=', Auth::user()->id],
+            ["petOwner_id", '=', $petid]
+        ];
+        //pet love -> pet yg suka spa
+        //pet owner -> pet yg disuka
+        
+        $petsLove = PetsLove::where('id', $id)->first(); 
         $petsLove->status = 1; //accepted
         $petsLove->save();
         
-        $petOwner = Pet::where('id', $petsLove->userOwner_id)->first();
+        $petOwner = Pet::where('id', $petsLove->petOwner_id)->first();
         $petOwner->post_status = 0;
         $petOwner->save();
 
-        $petFindLove = Pet::where('id', $petsLove->userLove_id)->first();
+        $petFindLove = Pet::where('id', $petsLove->petLove_id)->first();
         $petFindLove->post_status = 0;
         $petFindLove->save();
 
-        $petToDelete = PetsLove::where('userOwner_id', Auth::user()->id)->get();
+        //$petToDelete = PetsLove::where('userOwner_id', Auth::user()->id)->get();
+        $petToDelete = PetsLove::where($condition)->get();
         foreach($petToDelete as $p){
             $p->delete();
         }
 
         return redirect('/profile');
+    }
+
+    public function updateStatus($petid , $status)
+    {
+        $pet = Pet::where('id', $petid)->first();        
+        $pet->post_status = $status;
+        $pet->save();
     }
 }

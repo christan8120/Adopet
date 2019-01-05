@@ -29,5 +29,6 @@ Route::get('/profile', 'UserController@profile')->middleware(Middleware\SessionC
 
 Route::post('/savePet', 'PetController@savePet')->middleware(Middleware\SessionCheck::class);
 Route::post('/saveList', 'PetController@saveFindLove')->middleware(Middleware\SessionCheck::class);
-Route::get('acceptMate/{id}', 'PetController@acceptMate')->middleware(Middleware\SessionCheck::class);
+Route::get('acceptMate/{id}/{petid}', 'PetController@acceptMate')->middleware(Middleware\SessionCheck::class);
+Route::get('updateStatus/{petid}/{status}', 'PetController@updateStatus')->middleware(Middleware\SessionCheck::class);
 Route::get('/signout','UserController@signout');

@@ -25,7 +25,7 @@ class PageController extends Controller
     }
 
     public function findlove()
-    {
+    {        
         return view('findlove');
     }
 

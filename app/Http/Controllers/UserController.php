@@ -53,12 +53,14 @@ class UserController extends Controller
     public function profile(){
         $user = User::where('id',Auth::user()->id)->first();
         $adoptedPets = TrAdoption::where('userAdopter', Auth::user()->id)->get();    
-        $loveMates = PetsLove::where('userOwner_id', Auth::user()->id)->get();        
+        $loveMates = PetsLove::where('userOwner_id', Auth::user()->id)->get();          
+        $myPets = Pet::where('userOwner', Auth::user()->id)->get();        
         $data = [
             'user' => $user,
             'adoptedPets' => $adoptedPets,
-            'loveMates' => $loveMates            
-        ];
+            'loveMates' => $loveMates,            
+            'myPets' => $myPets
+        ];        
         //return view('profile',compact('user'));
         return view('profile', $data);
     }

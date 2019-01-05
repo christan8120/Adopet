@@ -21,6 +21,13 @@ class UserSeeder extends Seeder
             'gender' => 'Male',
 //            'email_verified_at' => Carbon::now()
         ]);
-
+        DB::table('users')->insert([
+            'name' => 'user',
+            'password' => Hash::make('user'),
+            'email' => 'user@user.com',
+            'address' => 'Indonesia',
+            'gender' => 'Male',
+//            'email_verified_at' => Carbon::now()
+        ]);
     }
 }

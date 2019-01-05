@@ -22,6 +22,8 @@ $(document).ready(function() {
   
     function release(id) {      
       if (pullDeltaX >= decisionVal) {
+        var petid = $('#selectMyPet').val();
+        
         $card.addClass("to-right");   
         $.ajaxSetup({
           headers: {
@@ -31,7 +33,7 @@ $(document).ready(function() {
         $.ajax({
           type:"POST",
           url:"/saveList",
-          data:{'id':id},
+          data:{'id':id, 'petid':petid},
           success:function(msg){
             console.log(msg);
           }

@@ -13,4 +13,7 @@ class Pet extends Model
     public function tradoption(){
         return $this->hasMany(TrAdoption::class);
     }
+    public function user(){
+        return $this->belongsTo(Category::class, 'userOwner');
+    }
 }

@@ -11,10 +11,11 @@
     <!------ Include the above in your HEAD tag ---------->
 
     <div class="container">
-        <div class="row justify-content-center">
-                <button onclick="showProfile()"class="menuP col-4"><a href="#profile">Your Profile</a></button>
-                <button onclick="showAdoptions()"class="menuP col-4"><a href="#adoption">Adoption</a></button>
-                <button onclick="showLoveMate()"class="menuP col-4"><a href="#loveMate">Love-Mate</a></button>
+        <div class="row justify-content-center" style="font-size:10px;">
+                <button onclick="showProfile()"class="menuP col-3"><a href="#profile">Your Profile</a></button>
+                <button onclick="showAdoptions()"class="menuP col-3"><a href="#adoption">Adoption</a></button>
+				<button onclick="showMyPets()" class="menuP col-3"><a href="#mypets">My Pets</a></button>
+                <button onclick="showLoveMate()"class="menuP col-3"><a href="#loveMate">Love-Mate</a></button>				
         </div>
             <div class="row">   
                 <div class="col-md-9">
@@ -142,11 +143,71 @@
 		                        	</div>
 		                    	</div>
                                 @endforeach
-		                	</div>
+                                
+		                	</div>                            
 		            	</div>
 		        	</div>
 		    </div>
-		    
+
+		    <div class="row">   
+		            <div class="col-md-9">
+		                <div id="mypets" class="card">
+		                    <div class="card-body">
+		                        <div class="row">
+		                            <div class="col-md-12">
+		                                <h4>Your Pets</h4>		                                
+		                            </div>
+		                        </div>
+                                @foreach($myPets as $ap)
+                                <hr>
+		                        <div class="row">
+		                            <div class="col-md-12">
+		                                <form>
+		                                <div class="form-group row">
+		                                    <label for="namePet" class="col-4 col-form-label">Pet Name</label> 
+		                                    <div class="formS col-8">
+		                                    {{$ap->pet_name}}
+		                                    <!-- <input id="email" name="email" placeholder="Abcde@gmail.com" class="form-control here" required="required" type="text"> -->
+		                                    </div>
+		                                </div>
+		                                <div class="form-group row">
+		                                    <label for="Age" class="col-4 col-form-label">Age</label> 
+		                                    <div class="formS col-8">
+		                                    {{$ap->age}}
+		                                    <!-- <input id="name" name="name" placeholder="Abcde" class="form-control here" type="text"> -->
+		                                    </div>
+		                                </div>
+		                                <div class="form-group row">
+		                                    <label for="gender" class="col-4 col-form-label">Gender</label> 
+		                                    <div class="formS col-8">
+		                                    {{$ap->gender}}
+		                                    <!-- <input id="radio" name="gender" placeholder="Male" class="form-control here" required="required" type="text"> -->
+		                                    </div>
+		                                </div>
+		                                <div class="form-group row">
+		                                    <label for="Deskripsi" class="col-4 col-form-label">Deskripsi</label> 
+		                                    <div class="formS col-8">
+		                                    {{$ap->description}}
+		                                    <!-- <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea> -->
+		                                    </div>
+		                                </div>
+										<div class="form-group row">
+		                                    <label for="Status" class="col-4 col-form-label">Status</label> 
+		                                    <div class="formS col-8">
+		                                    <input type="radio" name="status" value="0" onclick="update({{$ap->id}},this.value)" {{$ap->post_status == 0 ? "checked" : ""}}>None
+											<input type="radio" name="status" value="1" onclick="update({{$ap->id}},this.value)" {{$ap->post_status == 1 ? "checked" : ""}}>Adopt
+											<input type="radio" name="status" value="2" onclick="update({{$ap->id}},this.value)" {{$ap->post_status == 2 ? "checked" : ""}}>Find Love
+		                                    <!-- <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea> -->
+		                                    </div>
+		                                </div>
+		                            	</form>
+		                        	</div>
+		                    	</div>
+                                @endforeach                                
+		                	</div>                            
+		            	</div>
+		        	</div>
+		    </div>
 
             <!-- BAGIAN FIND LOVE >> apabila ada yang cocok dengan pet kita -->
             <div class="row">   
@@ -155,11 +216,16 @@
 		                    <div class="card-body">
 		                        <div class="row">
 		                            <div class="col-md-12">
-		                                <h4>Your Mate</h4>		                                
+										<h4>Your Mate</h4>		                                										
+										
 		                            </div>
-		                        </div>
-                                <hr>
-                                @foreach($loveMates as $lm)
+								</div>
+								
+								<hr>
+								@foreach($myPets as $pet)								
+								@foreach($loveMates as $lm)								
+								@if($lm->petOwner_id == $pet->id)
+								<h4>{{$pet->pet_name}}</h4>
 		                        <div class="row">
 		                            <div class="col-md-12">
 		                                <form>
@@ -208,13 +274,15 @@
                                         <!-- disini harusnya bukan submit, tapi tombol untuk oke untuk menerima tapi gw bingung bikinnya harus 1-1  :) tolong dong -->
                                         <div class="form-group row">
                                             <div class="offset-4 col-8">
-                                            <a href="/acceptMate/{{$lm->id}}" class="buttonS">Accept Mate!</a>
+                                            <a href="/acceptMate/{{$lm->id}}/{{$pet->id}}" class="buttonS">Accept Mate!</a>
                                             </div>
                                         </div>
 		                            	</form>
 		                        	</div>
-		                    	</div>
-                                @endforeach
+								</div>
+								@endif
+								@endforeach
+								@endforeach
 		                	</div>
 		            	</div>
 		        	</div>

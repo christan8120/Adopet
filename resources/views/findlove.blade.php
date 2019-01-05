@@ -6,6 +6,16 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/findlove.css')}}">
 
 <div class="limiter">    
+    @if(count($usersPets) > 0)
+    <div class="row">
+                <label for="">Choose Your Pet</label>
+                <select name="mypet" id="selectMyPet">
+                    @foreach($usersPets as $pet)
+                        <option value="{{$pet->id}}">{{$pet->pet_name}}</option>
+                    @endforeach
+                </select>
+            </div>  
+    @endif
     <div class="demo__content">
         <div class="demo__card-cont">
             @if(count($usersPets)<=0)
@@ -62,7 +72,7 @@
                 </div>
                 </div>
             </div>          
-            @if(count($usersPets)>0)  
+            @if(count($usersPets)>0)        
             @foreach($availablePets as $pet)
             <div class="demo__card" id="{{$pet->id}}">
                 <img src="{{asset($pet->picture_src)}}" alt="" width="100%" heigth="100%">
@@ -76,7 +86,9 @@
                 <div class="demo__card__choice m--reject"></div>
                 <div class="demo__card__choice m--like"></div>
                 <div class="demo__card__drag"></div>
-            </div>            
+                <div class="text-center">{{$pet->user->name}}</div>      
+            </div>      
+            
             @endforeach
             @endif
             <!-- <div class="demo__card">
