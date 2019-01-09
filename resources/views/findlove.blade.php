@@ -8,7 +8,7 @@
 <div class="limiter">    
     @if(count($usersPets) > 0)
     <div class="row">
-                <label for="">Choose Your Pet</label>
+                <p for="">Choose Your Pet</p>
                 <select name="mypet" id="selectMyPet">
                     @foreach($usersPets as $pet)
                         <option value="{{$pet->id}}">{{$pet->pet_name}}</option>
