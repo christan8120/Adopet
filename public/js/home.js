@@ -19,6 +19,10 @@ $( document ).ready(function() {
           $('.modal').css('display','none');
         }
     });
+
+    $('#selectPet').change(function(){
+      window.location = "/filterPet/" + this.value;
+    });
 });
 
 // scrolling nav tapi ngga ngefek.
@@ -69,3 +73,4 @@ $( document ).ready(function() {
   function confirmAdopt(id){        
     window.location = "/adoptIt/"+ id;
   }//
+

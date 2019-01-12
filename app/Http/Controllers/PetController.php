@@ -20,8 +20,29 @@ class PetController extends Controller
             ["userOwner" , "!=", Auth::user()->id]
         ];
         //$pets = Pet::where('post_status', 1)->get();
-        $pets = Pet::where($condition)->get();
-        return view('home', ['pets'=>$pets]);
+        $pets = Pet::where($condition)->paginate(20);
+        $categories = Category::all();
+        return view('home', ['pets'=>$pets, 'categories'=>$categories, 'category_id'=> 0]);
+    }
+
+    public function filterPet($id){
+        $condition;
+        if($id != 0){
+            $condition = [
+                ["post_status", "=", "1"],
+                ["userOwner" , "!=", Auth::user()->id],
+                ["category_id", '=', $id]
+            ];        
+        }else{
+            $condition = [
+                ["post_status", "=", "1"],
+                ["userOwner" , "!=", Auth::user()->id]                
+            ];        
+        }
+        $pets = Pet::where($condition)->paginate(20);
+        $categories = Category::all();        
+
+        return view('home', ['pets'=>$pets, 'categories'=>$categories, 'category_id'=>$id]);
     }
 
     public function adoptIt($id){
